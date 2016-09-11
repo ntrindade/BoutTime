@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +17,253 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyY-O9-HYt" userLabel="Label Event 1">
+                                <rect key="frame" x="30" y="30" width="510" height="86"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="86" id="WTb-By-GUn"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Historical Event Historical Event Historical Event">
+                                        <attributes>
+                                            <color key="NSColor" red="0.19152533880843228" green="0.39422262356545923" blue="0.47005797511312208" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="15" headIndent="15" defaultTabInterval="15" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdP-Ss-XO0" userLabel="Label Event 2">
+                                <rect key="frame" x="30" y="124" width="510" height="86"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="86" id="wFK-k1-peG"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Historical Event Historical Event Historical Event">
+                                        <attributes>
+                                            <color key="NSColor" red="0.19152533880843228" green="0.39422262356545923" blue="0.47005797511312208" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="15" headIndent="15" defaultTabInterval="15" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJS-p5-Tba" userLabel="Label Event 3">
+                                <rect key="frame" x="30" y="218" width="510" height="86"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="86" id="sng-dq-FwD"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Historical Event Historical Event Historical Event">
+                                        <attributes>
+                                            <color key="NSColor" red="0.19152533880843228" green="0.39422262356545923" blue="0.47005797511312208" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="15" headIndent="15" defaultTabInterval="15" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C00-zK-osy" userLabel="Label Event 4">
+                                <rect key="frame" x="30" y="312" width="510" height="86"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="86" id="gYc-BR-bOc"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Historical Event Historical Event Historical Event">
+                                        <attributes>
+                                            <color key="NSColor" red="0.19152533880843228" green="0.39422262356545923" blue="0.47005797511312208" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="15" headIndent="15" defaultTabInterval="15" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPa-zN-XP0" userLabel="Button Full Up">
+                                <rect key="frame" x="535" y="312" width="35" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="86" id="Jea-YF-p5c"/>
+                                    <constraint firstAttribute="width" constant="35" id="v6V-GA-1Ya"/>
+                                </constraints>
+                                <state key="normal" image="UpFull"/>
+                                <connections>
+                                    <action selector="MoveUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pec-9M-Qdg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-am-YeL" userLabel="Button Half Up 1">
+                                <rect key="frame" x="535" y="124" width="35" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="0rR-7n-Uc5"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="43" id="Vvp-Ao-lLD"/>
+                                </constraints>
+                                <state key="normal" image="UpHalf"/>
+                                <connections>
+                                    <action selector="MoveUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evu-AB-odv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi1-bK-Dcs" userLabel="Button Half Down 1">
+                                <rect key="frame" x="535" y="167" width="35" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="43" id="F3f-CG-bIS"/>
+                                    <constraint firstAttribute="width" constant="35" id="mxr-rf-lAC"/>
+                                </constraints>
+                                <state key="normal" image="DownHalf"/>
+                                <connections>
+                                    <action selector="MoveDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zxw-qK-gl7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J6-9S-fln" userLabel="Button Half Up 2">
+                                <rect key="frame" x="535" y="218" width="35" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="c88-Tm-cd6"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="43" id="vmi-Bn-Z2l"/>
+                                </constraints>
+                                <state key="normal" image="UpHalf"/>
+                                <connections>
+                                    <action selector="MoveUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TY4-SG-Fq5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K07-Nc-73t" userLabel="Button Half Down 2">
+                                <rect key="frame" x="535" y="261" width="35" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="43" id="Bru-aL-CFc"/>
+                                    <constraint firstAttribute="width" constant="35" id="G9H-2v-VV7"/>
+                                </constraints>
+                                <state key="normal" image="DownHalf"/>
+                                <connections>
+                                    <action selector="MoveDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNX-bL-tdm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36S-f7-VIQ" userLabel="Button Full Down">
+                                <rect key="frame" x="535" y="30" width="35" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="Icr-2f-Xq6"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="86" id="sB4-ns-MyM"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="DownFull"/>
+                                <connections>
+                                    <action selector="MoveDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZg-SP-aA6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auz-oE-N6z" userLabel="Label Time">
+                                <rect key="frame" x="30" y="525" width="540" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="FDQ-2Z-SWE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake to complete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdF-QY-Thl" userLabel="Label Info">
+                                <rect key="frame" x="30" y="565" width="540" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="EHR-of-boT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.30963268874050892" green="0.62613178908295086" blue="0.74703525641025648" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.090012400950000002" green="0.15026851660000001" blue="0.28439852760000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZdF-QY-Thl" secondAttribute="bottom" constant="15" id="11X-oE-yfs"/>
+                            <constraint firstItem="EPa-zN-XP0" firstAttribute="height" secondItem="C00-zK-osy" secondAttribute="height" id="1bX-wn-z1k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C00-zK-osy" secondAttribute="trailing" constant="40" id="2Em-19-Tae"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lJS-p5-Tba" secondAttribute="trailing" constant="40" id="2sm-Ar-hNL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="36S-f7-VIQ" secondAttribute="trailing" constant="10" id="4RJ-Xd-DUF"/>
+                            <constraint firstItem="JdP-Ss-XO0" firstAttribute="top" secondItem="36S-f7-VIQ" secondAttribute="bottom" constant="8" id="95p-xO-uiU"/>
+                            <constraint firstItem="K07-Nc-73t" firstAttribute="top" secondItem="4J6-9S-fln" secondAttribute="bottom" id="9bd-5c-BjK"/>
+                            <constraint firstItem="ZdF-QY-Thl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Dg0-xb-vba"/>
+                            <constraint firstItem="Auz-oE-N6z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="DyL-66-niX"/>
+                            <constraint firstItem="4J6-9S-fln" firstAttribute="top" secondItem="fi1-bK-Dcs" secondAttribute="bottom" constant="8" id="EmS-ur-KMy" userLabel="Button Half Up 2.top = Button Half Down 1.bottom + 8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mqq-am-YeL" secondAttribute="trailing" constant="10" id="H4q-tP-JGO"/>
+                            <constraint firstItem="fi1-bK-Dcs" firstAttribute="top" secondItem="Mqq-am-YeL" secondAttribute="bottom" id="IZ6-Y1-ugj"/>
+                            <constraint firstItem="gyY-O9-HYt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="In8-fO-pZt"/>
+                            <constraint firstItem="36S-f7-VIQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="LeT-oY-ciK"/>
+                            <constraint firstItem="EPa-zN-XP0" firstAttribute="top" secondItem="K07-Nc-73t" secondAttribute="bottom" constant="8" id="N5g-kA-JuR" userLabel="Button Full Up.top = Button Half Down 2.bottom + 8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JdP-Ss-XO0" secondAttribute="trailing" constant="40" id="PMi-Xy-iAX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fi1-bK-Dcs" secondAttribute="trailing" constant="10" id="REA-M2-kTr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4J6-9S-fln" secondAttribute="trailing" constant="10" id="S1U-8Z-utc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Auz-oE-N6z" secondAttribute="trailing" constant="10" id="Uyk-gB-X9W"/>
+                            <constraint firstItem="JdP-Ss-XO0" firstAttribute="height" secondItem="gyY-O9-HYt" secondAttribute="height" id="Yj9-SM-6Ie"/>
+                            <constraint firstItem="JdP-Ss-XO0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="acr-vU-QeL"/>
+                            <constraint firstItem="lJS-p5-Tba" firstAttribute="height" secondItem="gyY-O9-HYt" secondAttribute="height" id="bRE-Fz-eh5"/>
+                            <constraint firstItem="lJS-p5-Tba" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="dD7-jk-ILn"/>
+                            <constraint firstItem="C00-zK-osy" firstAttribute="top" secondItem="lJS-p5-Tba" secondAttribute="bottom" constant="8" id="eP9-GO-yNZ"/>
+                            <constraint firstItem="Auz-oE-N6z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="C00-zK-osy" secondAttribute="bottom" constant="10" id="gDL-xd-Ztj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gyY-O9-HYt" secondAttribute="trailing" constant="40" id="gM1-QP-RKM"/>
+                            <constraint firstItem="K07-Nc-73t" firstAttribute="top" secondItem="4J6-9S-fln" secondAttribute="bottom" id="ggC-ra-9gp"/>
+                            <constraint firstItem="EPa-zN-XP0" firstAttribute="top" secondItem="K07-Nc-73t" secondAttribute="bottom" constant="8" id="h0m-EG-Djr" userLabel="Button Full Up.top = Button Half Down 2.bottom + 8"/>
+                            <constraint firstItem="lJS-p5-Tba" firstAttribute="top" secondItem="JdP-Ss-XO0" secondAttribute="bottom" constant="8" id="h7f-S5-86X"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZdF-QY-Thl" secondAttribute="trailing" constant="10" id="hGE-ak-WgN"/>
+                            <constraint firstItem="fi1-bK-Dcs" firstAttribute="top" secondItem="Mqq-am-YeL" secondAttribute="bottom" id="ihN-x9-YOJ"/>
+                            <constraint firstItem="36S-f7-VIQ" firstAttribute="height" secondItem="gyY-O9-HYt" secondAttribute="height" id="inH-AC-POc"/>
+                            <constraint firstItem="ZdF-QY-Thl" firstAttribute="width" secondItem="Auz-oE-N6z" secondAttribute="width" id="oFE-MN-mfz"/>
+                            <constraint firstItem="C00-zK-osy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="pda-dm-fBk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EPa-zN-XP0" secondAttribute="trailing" constant="10" id="qSd-UF-MM9"/>
+                            <constraint firstItem="ZdF-QY-Thl" firstAttribute="top" secondItem="Auz-oE-N6z" secondAttribute="bottom" id="tFT-qY-2Aw"/>
+                            <constraint firstItem="4J6-9S-fln" firstAttribute="top" secondItem="fi1-bK-Dcs" secondAttribute="bottom" constant="8" id="taG-oR-EfB" userLabel="Button Half Up 2.top = Button Half Down 1.bottom + 8"/>
+                            <constraint firstItem="C00-zK-osy" firstAttribute="height" secondItem="gyY-O9-HYt" secondAttribute="height" id="tgH-D6-VNO"/>
+                            <constraint firstItem="Mqq-am-YeL" firstAttribute="top" secondItem="36S-f7-VIQ" secondAttribute="bottom" constant="8" id="wuB-e4-mVa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K07-Nc-73t" secondAttribute="trailing" constant="10" id="yyJ-jS-Exi"/>
+                            <constraint firstItem="gyY-O9-HYt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="zNQ-dd-cLI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonFullDown" destination="36S-f7-VIQ" id="dWy-e2-Zp2"/>
+                        <outlet property="buttonFullUp" destination="EPa-zN-XP0" id="Wyf-zj-QVw"/>
+                        <outlet property="buttonHalfDownOne" destination="fi1-bK-Dcs" id="e4I-fB-sJV"/>
+                        <outlet property="buttonHalfDownTwo" destination="K07-Nc-73t" id="yJl-f9-vVn"/>
+                        <outlet property="buttonHalfUpOne" destination="Mqq-am-YeL" id="YhQ-nc-Tzd"/>
+                        <outlet property="buttonHalfUpTwo" destination="4J6-9S-fln" id="IlV-gz-eMa"/>
+                        <outlet property="labelEvent1" destination="gyY-O9-HYt" id="Mkw-oA-XW7"/>
+                        <outlet property="labelEvent2" destination="JdP-Ss-XO0" id="mxL-eJ-l4c"/>
+                        <outlet property="labelEvent3" destination="lJS-p5-Tba" id="baC-cH-jre"/>
+                        <outlet property="labelEvent4" destination="C00-zK-osy" id="T4B-HN-yee"/>
+                        <outlet property="labelInfo" destination="ZdF-QY-Thl" id="5pC-P5-LxO"/>
+                        <outlet property="labelTime" destination="Auz-oE-N6z" id="Q07-ag-ERr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-7" y="300"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DownFull" width="52" height="152"/>
+        <image name="DownHalf" width="52" height="76"/>
+        <image name="UpFull" width="52" height="152"/>
+        <image name="UpHalf" width="52" height="76"/>
+    </resources>
 </document>
