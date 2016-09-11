@@ -23,13 +23,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonFullUp: UIButton!
     
     @IBOutlet weak var labelTime: UILabel!
-    @IBOutlet weak var labelInfo: UILabel!   
+    @IBOutlet weak var labelInfo: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if motion == .MotionShake {
+            // FIXME: Implement the Round Solution in the game
+            self.labelInfo.text = "Shaken, not stirred"
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
