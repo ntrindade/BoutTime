@@ -4,11 +4,11 @@
 //
 //  Created by Nuno Trindade on 05/09/16.
 //  Copyright © 2016 Remarkable Code Ltd. All rights reserved.
-//
+//  Equatable implementation credits to: https://gist.github.com/hooman/cfe98f9ac55c93f15247
 
 import Foundation
 
-class HistoricalEvent: HistoricalEventType, Moveable {
+class HistoricalEvent: HistoricalEventType, Moveable, Equatable {
     let text: String
     let year: Int
     let month: Month
@@ -46,4 +46,18 @@ class HistoricalEvent: HistoricalEventType, Moveable {
         
         throw BoutTimeError.CannotMoveDown("Cannot move Down")
     }
+    
+    func equals<T where T: HistoricalEvent>(other: T) -> Bool {
+        return text == other.text && year == other.year && month == other.month
+    }
 }
+
+func ==<T where T: HistoricalEvent>(lhs: T, rhs: T) -> Bool {
+    return lhs.equals(rhs)
+}
+
+
+
+
+
+

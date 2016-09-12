@@ -10,7 +10,7 @@ import Foundation
 
 struct HistoricalEventModel {
     
-    let historicalEvents: [HistoricalEvent] =
+    let staticHistoricalEvents: [HistoricalEvent] =
         [
             HistoricalEvent(text: "Winter Olympics held in Salt Lake City, Utah, United States.", year: 2002, month: .February, url: NSURL(fileURLWithPath: "https://en.wikipedia.org/wiki/2002_Winter_Olympics")),
             HistoricalEvent(text: "Summer Olympics held in Athens, Greece.", year: 2004, month: .August, url: NSURL(fileURLWithPath: "https://en.wikipedia.org/wiki/2004_Summer_Olympics")),
@@ -78,13 +78,16 @@ struct HistoricalEventModel {
         ]
     
     func getHistoricalEvents(numberOfHistoricalEvents: Int) -> [HistoricalEvent] {
-        
+        return getHistoricalEvents(numberOfHistoricalEvents, historicalEvents: staticHistoricalEvents)
+    }
+    
+    func getHistoricalEvents(numberOfHistoricalEvents: Int, historicalEvents: [HistoricalEvent]) -> [HistoricalEvent] {
         var historicalEvents: [HistoricalEvent] = []
         var indexesAlreadyPicked: [Int] = []
         
         for _ in 1...numberOfHistoricalEvents {
             
-            let randomIndex: Int = RandomNumber.getWithUpperBoundAndRestrictions(upperBound: historicalEvents.count, restrictions: indexesAlreadyPicked)
+            let randomIndex: Int = RandomNumber.getWithUpperBoundAndRestrictions(upperBound: numberOfHistoricalEvents, restrictions: indexesAlreadyPicked)
             indexesAlreadyPicked.append(randomIndex)
             historicalEvents.append(historicalEvents[randomIndex])
         }
