@@ -14,9 +14,9 @@ struct SoundModel {
     mutating func loadGameSounds() {
         var index = 0
         for var soundFile in soundFiles {
-            let pathToSoundFile = NSBundle.mainBundle().pathForResource(soundFile.name.rawValue, ofType: "wav")
-            let soundURL = NSURL(fileURLWithPath: pathToSoundFile!)
-            AudioServicesCreateSystemSoundID(soundURL, &soundFile.soundId)
+            let pathToSoundFile = Bundle.main.path(forResource: soundFile.name.rawValue, ofType: "wav")
+            let soundURL = URL(fileURLWithPath: pathToSoundFile!)
+            AudioServicesCreateSystemSoundID(soundURL as CFURL, &soundFile.soundId)
             soundFiles[index].soundId = soundFile.soundId
             index += 1
         }
@@ -34,7 +34,7 @@ struct SoundModel {
         }
     }
     
-    func getSoundFile(soundName: SoundType) -> SoundFile? {
+    func getSoundFile(_ soundName: SoundType) -> SoundFile? {
         for soundFile in soundFiles where soundFile.name == soundName {
             return soundFile
         }

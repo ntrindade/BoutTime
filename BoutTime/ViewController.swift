@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     var gameModel = GameModel()
     var soundModel = SoundModel()
     
-    var timeoutBlocker: dispatch_block_t?
+    var gameWorkItem: DispatchWorkItem? = nil
     var timeoutDisplay: Int = 0
-    var timer: NSTimer?
+    var timer: Timer?
     
     @IBOutlet weak var labelEvent1: UILabel!
     @IBOutlet weak var labelEvent2: UILabel!
@@ -28,62 +28,83 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonHalfUpTwo: UIButton!
     @IBOutlet weak var buttonHalfDownTwo: UIButton!
     @IBOutlet weak var buttonFullUp: UIButton!
+    @IBOutlet weak var buttonResult: UIButton!
     
     @IBOutlet weak var labelTime: UILabel!
     @IBOutlet weak var labelInfo: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        soundModel.loadGameSounds()
-        
+        startNewGame()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: Action Methods
     
-    @IBAction func MoveUp(sender: UIButton) {
+    @IBAction func MoveUp(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func MoveDown(_ sender: UIButton) {
     
     }
     
-    @IBAction func MoveDown(sender: UIButton) {
+    @IBAction func NextRound(_ sender: AnyObject) {
     
     }
     
-    override func canBecomeFirstResponder() -> Bool {
+    
+    override var canBecomeFirstResponder : Bool {
         return true
     }
     
-    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
-        if motion == .MotionShake {
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
             // FIXME: Implement the Round Solution in the game
             self.labelInfo.text = "Shaken, not stirred"
         }
     }
     
     // MARK: Helper Methods
+    func startNewGame() {
+        soundModel.loadGameSounds()
+        gameModel.startGame()
+        newRound()
+    }
     
-    func showAlert(title: String, message: String? = nil, style: UIAlertControllerStyle = .Alert) {
+    func newRound() {
+        displayHistoricalEvents()
+        setTimeoutOnRound()
+    }
+    
+    func displayHistoricalEvents() {
+        labelEvent1.text = gameModel.roundHistoricalEvents[0].text
+        labelEvent2.text = gameModel.roundHistoricalEvents[1].text
+        labelEvent3.text = gameModel.roundHistoricalEvents[2].text
+        labelEvent4.text = gameModel.roundHistoricalEvents[3].text
+    }
+    
+    func showAlert(_ title: String, message: String? = nil, style: UIAlertControllerStyle = .alert) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         
-        let okAction = UIAlertAction(title: "OK", style: .Default, handler: dismissAlert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: dismissAlert)
         
         alertController.addAction(okAction)
         
-        presentViewController(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
     
-    func dismissAlert(sender: UIAlertAction) {
+    func dismissAlert(_ sender: UIAlertAction) {
         // TODO: Implement method
     }
     
-    func setTimeoutOnQuestion() {
+    func setTimeoutOnRound() {
         timeoutDisplay = gameModel.roundTimeoutInSeconds
         let timerUpdateInSeconds = 1.0
-        timer = NSTimer.scheduledTimerWithTimeInterval(timerUpdateInSeconds, target: self, selector: #selector(ViewController.updateTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: timerUpdateInSeconds, target: self, selector: #selector(ViewController.updateTimer), userInfo: nil, repeats: true)
         
         timeoutRound(seconds: gameModel.roundTimeoutInSeconds)
     }
@@ -95,14 +116,16 @@ class ViewController: UIViewController {
         }
     }
     
-    func timeoutRound(seconds seconds: Int) {
-        // Converts a delay in seconds to nanoseconds as signed 64 bit integer
-        let delay = Int64(NSEC_PER_SEC * UInt64(seconds))
-        // Calculates a time value to execute the method given current time and delay
-        let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, delay)
+    func timeoutRound(seconds: Int) {
+        gameWorkItem = DispatchWorkItem(qos: .default, flags: .enforceQoS) {
+            
+        }
         
-        // Executes the nextRound method at the dispatch time on the main queue
-        dispatch_after(dispatchTime, dispatch_get_main_queue(), timeoutBlocker!)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(seconds), execute: gameWorkItem!)
+    }
+    
+    func suspendTimeout() {
+        gameWorkItem?.cancel()
     }
 }
 

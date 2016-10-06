@@ -12,7 +12,7 @@ class HistoricalEvent: HistoricalEventType, Moveable, Equatable {
     let text: String
     let year: Int
     let month: Month
-    let url: NSURL
+    let url: URL
     
     let lowestPosition = 0
     let highestPosition = 3
@@ -22,7 +22,7 @@ class HistoricalEvent: HistoricalEventType, Moveable, Equatable {
     
     let movement = 1
     
-    required init(text: String, year: Int, month: Month, url: NSURL) {
+    required init(text: String, year: Int, month: Month, url: URL) {
         self.text = text
         self.year = year
         self.url = url
@@ -35,7 +35,7 @@ class HistoricalEvent: HistoricalEventType, Moveable, Equatable {
             currentPosition += movement
         }
         
-        throw BoutTimeError.CannotMoveUp("Cannot move Up")
+        throw BoutTimeError.cannotMoveUp("Cannot move Up")
     }
     
     func moveDown() throws {
@@ -44,15 +44,15 @@ class HistoricalEvent: HistoricalEventType, Moveable, Equatable {
             currentPosition -= movement
         }
         
-        throw BoutTimeError.CannotMoveDown("Cannot move Down")
+        throw BoutTimeError.cannotMoveDown("Cannot move Down")
     }
     
-    func equals<T where T: HistoricalEvent>(other: T) -> Bool {
+    func equals<T>(_ other: T) -> Bool where T: HistoricalEvent {
         return text == other.text && year == other.year && month == other.month
     }
 }
 
-func ==<T where T: HistoricalEvent>(lhs: T, rhs: T) -> Bool {
+func ==<T>(lhs: T, rhs: T) -> Bool where T: HistoricalEvent {
     return lhs.equals(rhs)
 }
 

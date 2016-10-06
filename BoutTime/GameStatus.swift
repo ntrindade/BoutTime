@@ -7,6 +7,6 @@
 //
 
 enum GameStatus {
-    case NextQuestion
-    case EndOfGame
+    case nextQuestion
+    case endOfGame
 }

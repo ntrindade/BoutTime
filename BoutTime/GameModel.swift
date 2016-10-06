@@ -15,6 +15,7 @@ struct GameModel {
     let roundTimeoutInSeconds = 60
     let historicalEventModel = HistoricalEventModel()
     
+    var gameStatus: GameStatus = GameStatus.nextQuestion
     var gameHistoricalEvents: [HistoricalEvent] = []
     var roundHistoricalEvents: [HistoricalEvent] = []
     var sortedHistoricalEvents: [HistoricalEvent] = []
@@ -26,18 +27,18 @@ struct GameModel {
         correctRounds = 0
         let totalNumberOfHistoricalEvents = numberOfRoundsPerGame * numberOfHistoricalEventsPerRound
         gameHistoricalEvents = historicalEventModel.getHistoricalEvents(totalNumberOfHistoricalEvents)
-        nextRound()
+        gameStatus = nextRound()
     }
     
     mutating func nextRound() -> GameStatus {
         if gameHistoricalEvents.count == 0 {
-            return GameStatus.EndOfGame
+            return GameStatus.endOfGame
         }
         
         roundHistoricalEvents = historicalEventModel.getHistoricalEvents(numberOfHistoricalEventsPerRound, historicalEvents: gameHistoricalEvents)
         sortedHistoricalEvents = historicalEventModel.sortHistoricalEvents(roundHistoricalEvents)
         gameHistoricalEvents.removeObjectsInArray(roundHistoricalEvents)
         
-        return GameStatus.NextQuestion
+        return GameStatus.nextQuestion
     }
 }

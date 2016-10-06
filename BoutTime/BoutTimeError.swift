@@ -6,7 +6,7 @@
 //  Copyright © 2016 Remarkable Code Ltd. All rights reserved.
 //
 
-enum BoutTimeError: ErrorType {
-    case CannotMoveUp(String)
-    case CannotMoveDown(String)
+enum BoutTimeError: Error {
+    case cannotMoveUp(String)
+    case cannotMoveDown(String)
 }

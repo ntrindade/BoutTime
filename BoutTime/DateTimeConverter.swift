@@ -7,11 +7,11 @@
 //
 
 class DateTimeConverter {
-    class func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
+    class func secondsToHoursMinutesSeconds (_ seconds : Int) -> (Int, Int, Int) {
         return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
     }
     
-    class func secondsToHoursMinutesSeconds(seconds: Int) -> String {
+    class func secondsToHoursMinutesSeconds(_ seconds: Int) -> String {
         let (hours, minutes, seconds) = DateTimeConverter.secondsToHoursMinutesSeconds(seconds)
         let hoursString = hours > 0 ? "\(String(format: "%02d", hours)):" : ""
 

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,12 +17,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyY-O9-HYt" userLabel="Label Event 1">
-                                <rect key="frame" x="30" y="30" width="510" height="109.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gyY-O9-HYt" userLabel="Label Event 1">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="110" id="WTb-By-GUn"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="qBV-KV-D4K"/>
@@ -29,9 +29,9 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Historical Event Historical Event Historical Event">
                                         <attributes>
-                                            <color key="NSColor" red="0.19152533880843228" green="0.39422262356545923" blue="0.47005797511312208" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.19152533880843228" green="0.39422262356545923" blue="0.47005797511312208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="15" headIndent="15" defaultTabInterval="15" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" headIndent="15" defaultTabInterval="15" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO" headerLevel="1"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -43,9 +43,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdP-Ss-XO0" userLabel="Label Event 2">
-                                <rect key="frame" x="30" y="147.5" width="510" height="109.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JdP-Ss-XO0" userLabel="Label Event 2">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="110" id="8BU-v0-mZl"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="wFK-k1-peG"/>
@@ -53,9 +52,9 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Historical Event Historical Event Historical Event">
                                         <attributes>
-                                            <color key="NSColor" red="0.19152533880843228" green="0.39422262356545923" blue="0.47005797511312208" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.19152533880843228" green="0.39422262356545923" blue="0.47005797511312208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="15" headIndent="15" defaultTabInterval="15" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" headIndent="15" defaultTabInterval="15" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO" headerLevel="1"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -67,9 +66,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJS-p5-Tba" userLabel="Label Event 3">
-                                <rect key="frame" x="30" y="265" width="510" height="109.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJS-p5-Tba" userLabel="Label Event 3">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="110" id="gth-rP-ceP"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="sng-dq-FwD"/>
@@ -77,9 +75,9 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Historical Event Historical Event Historical Event">
                                         <attributes>
-                                            <color key="NSColor" red="0.19152533880843228" green="0.39422262356545923" blue="0.47005797511312208" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.19152533880843228" green="0.39422262356545923" blue="0.47005797511312208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="15" headIndent="15" defaultTabInterval="15" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" headIndent="15" defaultTabInterval="15" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO" headerLevel="1"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -91,9 +89,8 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C00-zK-osy" userLabel="Label Event 4">
-                                <rect key="frame" x="30" y="383" width="510" height="109.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C00-zK-osy" userLabel="Label Event 4">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="110" id="00F-os-C93"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="gYc-BR-bOc"/>
@@ -101,9 +98,9 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Historical Event Historical Event Historical Event">
                                         <attributes>
-                                            <color key="NSColor" red="0.19152533880843228" green="0.39422262356545923" blue="0.47005797511312208" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="NSColor" red="0.19152533880843228" green="0.39422262356545923" blue="0.47005797511312208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="18" name="HelveticaNeue-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" firstLineHeadIndent="15" headIndent="15" defaultTabInterval="15" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" headIndent="15" defaultTabInterval="15" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO" headerLevel="1"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -116,7 +113,6 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36S-f7-VIQ" userLabel="Button Full Down">
-                                <rect key="frame" x="535" y="30" width="35" height="109.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="Icr-2f-Xq6"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="110" id="mUm-RW-OVS"/>
@@ -128,7 +124,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-am-YeL" userLabel="Button Half Up 1">
-                                <rect key="frame" x="535" y="147" width="35" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="0rR-7n-Uc5"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Vvp-Ao-lLD"/>
@@ -140,7 +135,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi1-bK-Dcs" userLabel="Button Half Down 1">
-                                <rect key="frame" x="535" y="202" width="35" height="54.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="55" id="Emk-jI-6o0"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="F3f-CG-bIS"/>
@@ -152,7 +146,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K07-Nc-73t" userLabel="Button Half Down 2">
-                                <rect key="frame" x="535" y="319" width="35" height="54.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Bru-aL-CFc"/>
                                     <constraint firstAttribute="width" constant="35" id="G9H-2v-VV7"/>
@@ -164,7 +157,6 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPa-zN-XP0" userLabel="Button Full Up">
-                                <rect key="frame" x="535" y="381" width="35" height="109.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="110" id="1yO-gs-SB3"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="Jea-YF-p5c"/>
@@ -175,26 +167,31 @@
                                     <action selector="MoveUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pec-9M-Qdg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auz-oE-N6z" userLabel="Label Time">
-                                <rect key="frame" x="30" y="525" width="540" height="40"/>
+                            <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1r-EO-rgi" userLabel="Button Result">
+                                <frame key="frameInset" minX="94" minY="586" width="186" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="NextRoundSuccess"/>
+                                <connections>
+                                    <action selector="NextRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0F0-jX-Po7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Auz-oE-N6z" userLabel="Label Time">
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="FDQ-2Z-SWE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake to complete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdF-QY-Thl" userLabel="Label Info">
-                                <rect key="frame" x="30" y="565" width="540" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="EHR-of-boT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.30963268874050892" green="0.62613178908295086" blue="0.74703525641025648" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.30963268874050892" green="0.62613178908295086" blue="0.74703525641025648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J6-9S-fln" userLabel="Button Half Up 2">
-                                <rect key="frame" x="535" y="264" width="35" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="c88-Tm-cd6"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="55" id="oz1-eW-mQm"/>
@@ -206,7 +203,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.090012400950000002" green="0.15026851660000001" blue="0.28439852760000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.090012400950000002" green="0.15026851660000001" blue="0.28439852760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZdF-QY-Thl" secondAttribute="bottom" constant="15" id="11X-oE-yfs"/>
                             <constraint firstItem="EPa-zN-XP0" firstAttribute="height" secondItem="C00-zK-osy" secondAttribute="height" id="1bX-wn-z1k"/>
@@ -217,7 +214,7 @@
                             <constraint firstItem="K07-Nc-73t" firstAttribute="height" secondItem="36S-f7-VIQ" secondAttribute="height" multiplier="0.5" id="8nN-w3-l2d"/>
                             <constraint firstItem="K07-Nc-73t" firstAttribute="top" secondItem="4J6-9S-fln" secondAttribute="bottom" id="9bd-5c-BjK"/>
                             <constraint firstItem="ZdF-QY-Thl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Dg0-xb-vba"/>
-                            <constraint firstItem="Auz-oE-N6z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="DyL-66-niX"/>
+                            <constraint firstItem="Auz-oE-N6z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="DyL-66-niX"/>
                             <constraint firstItem="4J6-9S-fln" firstAttribute="top" secondItem="fi1-bK-Dcs" secondAttribute="bottom" constant="8" id="EmS-ur-KMy" userLabel="Button Half Up 2.top = Button Half Down 1.bottom + 8"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mqq-am-YeL" secondAttribute="trailing" constant="10" id="H4q-tP-JGO"/>
                             <constraint firstItem="fi1-bK-Dcs" firstAttribute="top" secondItem="Mqq-am-YeL" secondAttribute="bottom" id="IZ6-Y1-ugj"/>
@@ -228,7 +225,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="JdP-Ss-XO0" secondAttribute="trailing" constant="40" id="PMi-Xy-iAX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fi1-bK-Dcs" secondAttribute="trailing" constant="10" id="REA-M2-kTr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4J6-9S-fln" secondAttribute="trailing" constant="10" id="S1U-8Z-utc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Auz-oE-N6z" secondAttribute="trailing" constant="10" id="Uyk-gB-X9W"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Auz-oE-N6z" secondAttribute="trailing" constant="60" id="Uyk-gB-X9W"/>
                             <constraint firstItem="JdP-Ss-XO0" firstAttribute="height" secondItem="gyY-O9-HYt" secondAttribute="height" id="Yj9-SM-6Ie"/>
                             <constraint firstItem="JdP-Ss-XO0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="acr-vU-QeL"/>
                             <constraint firstItem="lJS-p5-Tba" firstAttribute="height" secondItem="gyY-O9-HYt" secondAttribute="height" id="bRE-Fz-eh5"/>
@@ -242,7 +239,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ZdF-QY-Thl" secondAttribute="trailing" constant="10" id="hGE-ak-WgN"/>
                             <constraint firstItem="fi1-bK-Dcs" firstAttribute="top" secondItem="Mqq-am-YeL" secondAttribute="bottom" id="ihN-x9-YOJ"/>
                             <constraint firstItem="36S-f7-VIQ" firstAttribute="height" secondItem="gyY-O9-HYt" secondAttribute="height" id="inH-AC-POc"/>
-                            <constraint firstItem="ZdF-QY-Thl" firstAttribute="width" secondItem="Auz-oE-N6z" secondAttribute="width" id="oFE-MN-mfz"/>
                             <constraint firstItem="C00-zK-osy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="pda-dm-fBk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EPa-zN-XP0" secondAttribute="trailing" constant="10" id="qSd-UF-MM9"/>
                             <constraint firstItem="JdP-Ss-XO0" firstAttribute="top" secondItem="gyY-O9-HYt" secondAttribute="bottom" constant="8" id="slJ-7f-OYz"/>
@@ -262,6 +258,7 @@
                         <outlet property="buttonHalfDownTwo" destination="K07-Nc-73t" id="yJl-f9-vVn"/>
                         <outlet property="buttonHalfUpOne" destination="Mqq-am-YeL" id="YhQ-nc-Tzd"/>
                         <outlet property="buttonHalfUpTwo" destination="4J6-9S-fln" id="IlV-gz-eMa"/>
+                        <outlet property="buttonResult" destination="r1r-EO-rgi" id="bdD-eT-qo3"/>
                         <outlet property="labelEvent1" destination="gyY-O9-HYt" id="Mkw-oA-XW7"/>
                         <outlet property="labelEvent2" destination="JdP-Ss-XO0" id="mxL-eJ-l4c"/>
                         <outlet property="labelEvent3" destination="lJS-p5-Tba" id="baC-cH-jre"/>
@@ -272,13 +269,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7" y="300"/>
+            <point key="canvasLocation" x="65" y="300"/>
+        </scene>
+        <!--View Controller Web Modal-->
+        <scene sceneID="N4s-kS-wMQ">
+            <objects>
+                <viewController id="61l-eF-CnA" customClass="ViewControllerWebModal" customModule="BoutTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MKg-Mx-Rjm"/>
+                        <viewControllerLayoutGuide type="bottom" id="mBb-Gn-tD8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cFB-4W-HFf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lml-RM-ROw">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggH-49-yqh" userLabel="Button Cancel">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7NL-Jh-fYi"/>
+                                </constraints>
+                                <state key="normal" image="WebViewBar"/>
+                                <connections>
+                                    <action selector="dismissWebModal" destination="61l-eF-CnA" eventType="touchUpInside" id="qpL-Lg-XfG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.090012400950000002" green="0.15026851660000001" blue="0.28439852760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ggH-49-yqh" firstAttribute="top" secondItem="MKg-Mx-Rjm" secondAttribute="bottom" constant="10" id="1fy-58-5RA"/>
+                            <constraint firstItem="ggH-49-yqh" firstAttribute="leading" secondItem="cFB-4W-HFf" secondAttribute="leading" constant="5" id="9fn-to-016"/>
+                            <constraint firstItem="lml-RM-ROw" firstAttribute="leading" secondItem="cFB-4W-HFf" secondAttribute="leading" constant="5" id="Ds2-H4-a0K"/>
+                            <constraint firstAttribute="trailing" secondItem="lml-RM-ROw" secondAttribute="trailing" constant="5" id="EjU-NL-srS"/>
+                            <constraint firstItem="lml-RM-ROw" firstAttribute="top" secondItem="ggH-49-yqh" secondAttribute="bottom" constant="5" id="Yl0-NA-n0m"/>
+                            <constraint firstItem="mBb-Gn-tD8" firstAttribute="top" secondItem="lml-RM-ROw" secondAttribute="bottom" constant="5" id="j0T-Vn-5vq"/>
+                            <constraint firstAttribute="trailing" secondItem="ggH-49-yqh" secondAttribute="trailing" constant="5" id="si1-G8-v4P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="lml-RM-ROw" id="tqW-qa-vhh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1bM-Me-PEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760.79999999999995" y="300"/>
         </scene>
     </scenes>
     <resources>
         <image name="DownFull" width="52" height="152"/>
         <image name="DownHalf" width="52" height="76"/>
+        <image name="NextRoundSuccess" width="186" height="47"/>
         <image name="UpFull" width="52" height="152"/>
         <image name="UpHalf" width="52" height="76"/>
+        <image name="WebViewBar" width="444" height="55"/>
     </resources>
 </document>

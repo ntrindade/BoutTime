@@ -25,6 +25,8 @@
 		E51CC8F91D7E155E0084AF2A /* SoundType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51CC8F81D7E155E0084AF2A /* SoundType.swift */; };
 		E51CC8FB1D7E15A00084AF2A /* SoundFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51CC8FA1D7E15A00084AF2A /* SoundFile.swift */; };
 		E51CC8FD1D7E16810084AF2A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E51CC8FC1D7E16810084AF2A /* AudioToolbox.framework */; };
+		E55D46F31D97E1A7004EED1E /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55D46F21D97E1A7004EED1E /* UILabelExtension.swift */; };
+		E55D46F51D9C4324004EED1E /* ViewControllerWebModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55D46F41D9C4324004EED1E /* ViewControllerWebModal.swift */; };
 		E56B43061D8733B30047F51C /* DateTimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B43051D8733B30047F51C /* DateTimeConverter.swift */; };
 		E56B43081D8742F90047F51C /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B43071D8742F90047F51C /* ArrayExtensions.swift */; };
 		E56B430A1D87490A0047F51C /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B43091D87490A0047F51C /* GameStatus.swift */; };
@@ -54,6 +56,8 @@
 		E51CC8F81D7E155E0084AF2A /* SoundType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundType.swift; sourceTree = "<group>"; };
 		E51CC8FA1D7E15A00084AF2A /* SoundFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundFile.swift; sourceTree = "<group>"; };
 		E51CC8FC1D7E16810084AF2A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E55D46F21D97E1A7004EED1E /* UILabelExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		E55D46F41D9C4324004EED1E /* ViewControllerWebModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerWebModal.swift; sourceTree = "<group>"; };
 		E56B43051D8733B30047F51C /* DateTimeConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeConverter.swift; sourceTree = "<group>"; };
 		E56B43071D8742F90047F51C /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		E56B43091D87490A0047F51C /* GameStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				E51CC8CE1D7AF80C0084AF2A /* ViewController.swift */,
+				E55D46F41D9C4324004EED1E /* ViewControllerWebModal.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				E56B43071D8742F90047F51C /* ArrayExtensions.swift */,
+				E55D46F21D97E1A7004EED1E /* UILabelExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -204,12 +210,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Remarkable Code Ltd";
 				TargetAttributes = {
 					E51CC8C81D7AF80C0084AF2A = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 24ZSRAJRA5;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.InterAppAudio = {
 								enabled = 1;
@@ -263,6 +270,7 @@
 				E56B430A1D87490A0047F51C /* GameStatus.swift in Sources */,
 				E51CC8E81D7C31AD0084AF2A /* SoundModel.swift in Sources */,
 				E56B43081D8742F90047F51C /* ArrayExtensions.swift in Sources */,
+				E55D46F51D9C4324004EED1E /* ViewControllerWebModal.swift in Sources */,
 				E576DBBA1D82016600A62EA9 /* GameModel.swift in Sources */,
 				E51CC8CD1D7AF80C0084AF2A /* AppDelegate.swift in Sources */,
 				E51CC8EA1D7DC3F40084AF2A /* BoutTimeError.swift in Sources */,
@@ -270,6 +278,7 @@
 				E51CC8F51D7E13FD0084AF2A /* HistoricalEventType.swift in Sources */,
 				E51CC8EE1D7DF7930084AF2A /* HistoricalEvent.swift in Sources */,
 				E51CC8F01D7DFE6D0084AF2A /* HistoricalEventModel.swift in Sources */,
+				E55D46F31D97E1A7004EED1E /* UILabelExtension.swift in Sources */,
 				E56B43061D8733B30047F51C /* DateTimeConverter.swift in Sources */,
 				E51CC8E61D7C31AD0084AF2A /* ColorModel.swift in Sources */,
 				E576DBB81D7F530D00A62EA9 /* Month.swift in Sources */,
@@ -312,8 +321,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -358,8 +369,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -378,6 +391,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -393,6 +407,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RmkCode.BoutTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -407,6 +422,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RmkCode.BoutTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
