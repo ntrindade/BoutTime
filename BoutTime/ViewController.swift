@@ -44,18 +44,17 @@ class ViewController: UIViewController {
 
     // MARK: Action Methods
     
-    @IBAction func MoveUp(_ sender: UIButton) {
+    @IBAction func moveUp(_ sender: UIButton) {
         
     }
     
-    @IBAction func MoveDown(_ sender: UIButton) {
+    @IBAction func moveDown(_ sender: UIButton) {
     
     }
     
-    @IBAction func NextRound(_ sender: AnyObject) {
+    @IBAction func nextRound(_ sender: AnyObject) {
     
     }
-    
     
     override var canBecomeFirstResponder : Bool {
         return true
@@ -73,6 +72,8 @@ class ViewController: UIViewController {
         soundModel.loadGameSounds()
         gameModel.startGame()
         newRound()
+        buttonResult.isHidden = true
+        setImagesOnHighlightedButtons()
     }
     
     func newRound() {
@@ -85,6 +86,15 @@ class ViewController: UIViewController {
         labelEvent2.text = gameModel.roundHistoricalEvents[1].text
         labelEvent3.text = gameModel.roundHistoricalEvents[2].text
         labelEvent4.text = gameModel.roundHistoricalEvents[3].text
+    }
+    
+    func setImagesOnHighlightedButtons() {
+        buttonFullDown.setImage(#imageLiteral(resourceName: "DownFullSelected"), for: UIControlState.highlighted)
+        buttonHalfUpOne.setImage(#imageLiteral(resourceName: "UpHalfSelected"), for: UIControlState.highlighted)
+        buttonHalfDownOne.setImage(#imageLiteral(resourceName: "DownHalfSelected"), for: UIControlState.highlighted)
+        buttonHalfUpTwo.setImage(#imageLiteral(resourceName: "UpHalfSelected"), for: UIControlState.highlighted)
+        buttonHalfDownTwo.setImage(#imageLiteral(resourceName: "DownHalfSelected"), for: UIControlState.highlighted)
+        buttonFullUp.setImage(#imageLiteral(resourceName: "UpFullSelected"), for: UIControlState.highlighted)
     }
     
     func showAlert(_ title: String, message: String? = nil, style: UIAlertControllerStyle = .alert) {

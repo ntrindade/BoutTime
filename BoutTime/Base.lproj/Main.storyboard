@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -22,6 +22,7 @@
                         <subviews>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gyY-O9-HYt" userLabel="Label Event 1">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="110" id="WTb-By-GUn"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="qBV-KV-D4K"/>
@@ -42,9 +43,13 @@
                                         <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="THh-wu-NL9" appends="YES" id="o7U-XE-K4F"/>
+                                </connections>
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JdP-Ss-XO0" userLabel="Label Event 2">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="110" id="8BU-v0-mZl"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="wFK-k1-peG"/>
@@ -65,9 +70,13 @@
                                         <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jZA-Qt-zES" appends="YES" id="Evf-uA-u27"/>
+                                </connections>
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJS-p5-Tba" userLabel="Label Event 3">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="110" id="gth-rP-ceP"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="sng-dq-FwD"/>
@@ -88,9 +97,13 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="259-CR-P3D" appends="YES" id="Nkj-e2-PdG"/>
+                                </connections>
                             </label>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C00-zK-osy" userLabel="Label Event 4">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="110" id="00F-os-C93"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="gYc-BR-bOc"/>
@@ -111,6 +124,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AB2-Ct-sY5" appends="YES" id="EcF-WP-SfO"/>
+                                </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36S-f7-VIQ" userLabel="Button Full Down">
                                 <constraints>
@@ -120,7 +136,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="DownFull"/>
                                 <connections>
-                                    <action selector="MoveDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MZg-SP-aA6"/>
+                                    <action selector="moveDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h40-PD-0Fc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-am-YeL" userLabel="Button Half Up 1">
@@ -131,7 +147,7 @@
                                 </constraints>
                                 <state key="normal" image="UpHalf"/>
                                 <connections>
-                                    <action selector="MoveUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evu-AB-odv"/>
+                                    <action selector="moveUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xrV-y9-oj1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi1-bK-Dcs" userLabel="Button Half Down 1">
@@ -142,7 +158,7 @@
                                 </constraints>
                                 <state key="normal" image="DownHalf"/>
                                 <connections>
-                                    <action selector="MoveDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zxw-qK-gl7"/>
+                                    <action selector="moveDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pPm-FH-Iyf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K07-Nc-73t" userLabel="Button Half Down 2">
@@ -153,7 +169,7 @@
                                 </constraints>
                                 <state key="normal" image="DownHalf"/>
                                 <connections>
-                                    <action selector="MoveDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNX-bL-tdm"/>
+                                    <action selector="moveDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pgb-6l-19R"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPa-zN-XP0" userLabel="Button Full Up">
@@ -164,7 +180,7 @@
                                 </constraints>
                                 <state key="normal" image="UpFull"/>
                                 <connections>
-                                    <action selector="MoveUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pec-9M-Qdg"/>
+                                    <action selector="moveDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XK7-zy-P7O"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1r-EO-rgi" userLabel="Button Result">
@@ -199,7 +215,7 @@
                                 </constraints>
                                 <state key="normal" image="UpHalf"/>
                                 <connections>
-                                    <action selector="MoveUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TY4-SG-Fq5"/>
+                                    <action selector="moveUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhE-us-4Id"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -268,6 +284,26 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="THh-wu-NL9" userLabel="Tap Gesture Recognizer 1">
+                    <connections>
+                        <segue destination="61l-eF-CnA" kind="presentation" modalTransitionStyle="coverVertical" id="mMz-GP-9aT"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="jZA-Qt-zES" userLabel="Tap Gesture Recognizer 2">
+                    <connections>
+                        <segue destination="61l-eF-CnA" kind="presentation" id="bus-Na-JI7"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="259-CR-P3D" userLabel="Tap Gesture Recognizer 3">
+                    <connections>
+                        <segue destination="61l-eF-CnA" kind="presentation" id="xNx-Ua-2tb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="AB2-Ct-sY5" userLabel="Tap Gesture Recognizer 4">
+                    <connections>
+                        <segue destination="61l-eF-CnA" kind="presentation" id="E7Z-Is-KHD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="65" y="300"/>
         </scene>
@@ -324,4 +360,7 @@
         <image name="UpHalf" width="52" height="76"/>
         <image name="WebViewBar" width="444" height="55"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mMz-GP-9aT"/>
+    </inferredMetricsTieBreakers>
 </document>

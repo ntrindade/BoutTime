@@ -104,12 +104,12 @@
 				E56B430E1D874A220047F51C /* Controllers */,
 				E56B430B1D8749640047F51C /* Models */,
 				E51CC8DE1D7C30930084AF2A /* Sounds */,
-				E51CC8F11D7E10F20084AF2A /* BoutTime.entitlements */,
 				E51CC8CC1D7AF80C0084AF2A /* AppDelegate.swift */,
 				E51CC8D01D7AF80C0084AF2A /* Main.storyboard */,
-				E51CC8D31D7AF80C0084AF2A /* Assets.xcassets */,
 				E51CC8D51D7AF80C0084AF2A /* LaunchScreen.storyboard */,
+				E51CC8D31D7AF80C0084AF2A /* Assets.xcassets */,
 				E51CC8D81D7AF80C0084AF2A /* Info.plist */,
+				E51CC8F11D7E10F20084AF2A /* BoutTime.entitlements */,
 			);
 			path = BoutTime;
 			sourceTree = "<group>";
