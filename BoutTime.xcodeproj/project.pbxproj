@@ -32,6 +32,7 @@
 		E56B430A1D87490A0047F51C /* GameStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B43091D87490A0047F51C /* GameStatus.swift */; };
 		E576DBB81D7F530D00A62EA9 /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = E576DBB71D7F530D00A62EA9 /* Month.swift */; };
 		E576DBBA1D82016600A62EA9 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E576DBB91D82016600A62EA9 /* GameModel.swift */; };
+		E5A70ECB1DBD18CF00B00A86 /* ViewControllerGameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A70ECA1DBD18CF00B00A86 /* ViewControllerGameResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		E56B43091D87490A0047F51C /* GameStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStatus.swift; sourceTree = "<group>"; };
 		E576DBB71D7F530D00A62EA9 /* Month.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		E576DBB91D82016600A62EA9 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		E5A70ECA1DBD18CF00B00A86 /* ViewControllerGameResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerGameResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			children = (
 				E51CC8CE1D7AF80C0084AF2A /* ViewController.swift */,
 				E55D46F41D9C4324004EED1E /* ViewControllerWebModal.swift */,
+				E5A70ECA1DBD18CF00B00A86 /* ViewControllerGameResult.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				E51CC8F71D7E142D0084AF2A /* Moveable.swift in Sources */,
 				E51CC8F91D7E155E0084AF2A /* SoundType.swift in Sources */,
 				E56B430A1D87490A0047F51C /* GameStatus.swift in Sources */,
+				E5A70ECB1DBD18CF00B00A86 /* ViewControllerGameResult.swift in Sources */,
 				E51CC8E81D7C31AD0084AF2A /* SoundModel.swift in Sources */,
 				E56B43081D8742F90047F51C /* ArrayExtensions.swift in Sources */,
 				E55D46F51D9C4324004EED1E /* ViewControllerWebModal.swift in Sources */,

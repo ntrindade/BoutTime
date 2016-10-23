@@ -7,6 +7,7 @@
 //
 
 enum BoutTimeError: Error {
-    case cannotMoveUp(String)
-    case cannotMoveDown(String)
+    case cannotMoveUp
+    case cannotMoveDown
+    case undefinedPosition
 }

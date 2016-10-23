@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GameModel {
+class GameModel {
 
     let numberOfRoundsPerGame = 6
     let numberOfHistoricalEventsPerRound = 4
@@ -22,15 +22,14 @@ struct GameModel {
     
     var correctRounds = 0
 
-    mutating func startGame() {
+    func startGame() {
 
         correctRounds = 0
         let totalNumberOfHistoricalEvents = numberOfRoundsPerGame * numberOfHistoricalEventsPerRound
         gameHistoricalEvents = historicalEventModel.getHistoricalEvents(totalNumberOfHistoricalEvents)
-        gameStatus = nextRound()
     }
     
-    mutating func nextRound() -> GameStatus {
+    func nextRound() -> GameStatus {
         if gameHistoricalEvents.count == 0 {
             return GameStatus.endOfGame
         }
@@ -40,5 +39,18 @@ struct GameModel {
         gameHistoricalEvents.removeObjectsInArray(roundHistoricalEvents)
         
         return GameStatus.nextQuestion
+    }
+
+    func resetRoundPositions() {
+        roundHistoricalEvents = historicalEventModel.resetHistoricalEvents(roundHistoricalEvents)
+    }
+    
+    func roundResultIsCorrect() -> Bool {
+        for roundHistoricalEvent in roundHistoricalEvents {
+            if roundHistoricalEvent.currentPosition != roundHistoricalEvent.correctPosition {
+                return false
+            }
+        }
+        return true
     }
 }

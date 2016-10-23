@@ -85,17 +85,19 @@ struct HistoricalEventModel {
         var localHistoricalEvents: [HistoricalEvent] = []
         var indexesAlreadyPicked: [Int] = []
         
-        for _ in 1...numberOfHistoricalEvents {
+        for index in 1...numberOfHistoricalEvents {
             
             let randomIndex: Int = RandomNumber.getWithUpperBoundAndRestrictions(upperBound: numberOfHistoricalEvents, restrictions: indexesAlreadyPicked)
             indexesAlreadyPicked.append(randomIndex)
-            localHistoricalEvents.append(historicalEvents[randomIndex])
+            let historicalEvent = historicalEvents[randomIndex]
+            historicalEvent.currentPosition = index - 1
+            localHistoricalEvents.append(historicalEvent)
         }
         
         return localHistoricalEvents
     }
     
-    func sortHistoricalEvents(_ historicalEvents:[HistoricalEvent]) -> [HistoricalEvent] {
+    func sortHistoricalEvents(_ historicalEvents: [HistoricalEvent]) -> [HistoricalEvent] {
         
         var historicalEventsSorted = historicalEvents.sorted { historicalEvent1, historicalEvent2 in
             if historicalEvent1.year == historicalEvent2.year {
@@ -107,6 +109,20 @@ struct HistoricalEventModel {
         var index = 0
         for _ in historicalEventsSorted {
             historicalEventsSorted[index].correctPosition = index
+            index += 1
+        }
+        
+        return historicalEventsSorted
+    }
+    
+    func resetHistoricalEvents(_ historicalEvents:[HistoricalEvent]) -> [HistoricalEvent] {
+        var historicalEventsSorted = historicalEvents.sorted { historicalEvent1, historicalEvent2 in
+            return historicalEvent1.currentPosition < historicalEvent2.currentPosition
+        }
+        
+        var index = 0
+        for _ in historicalEventsSorted {
+            historicalEventsSorted[index].currentPosition = index
             index += 1
         }
         

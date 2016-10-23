@@ -12,8 +12,6 @@ class ViewControllerWebModal: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,5 +23,9 @@ class ViewControllerWebModal: UIViewController {
     
     @IBAction func dismissWebModal() {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func loadUrl(eventsUrl: URL) {
+        webView?.loadRequest(URLRequest(url: eventsUrl))
     }
 }

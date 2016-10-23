@@ -136,7 +136,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="DownFull"/>
                                 <connections>
-                                    <action selector="moveDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h40-PD-0Fc"/>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jy6-hr-qMG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-am-YeL" userLabel="Button Half Up 1">
@@ -147,7 +147,7 @@
                                 </constraints>
                                 <state key="normal" image="UpHalf"/>
                                 <connections>
-                                    <action selector="moveUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xrV-y9-oj1"/>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cyD-rT-SYF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi1-bK-Dcs" userLabel="Button Half Down 1">
@@ -158,7 +158,18 @@
                                 </constraints>
                                 <state key="normal" image="DownHalf"/>
                                 <connections>
-                                    <action selector="moveDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pPm-FH-Iyf"/>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KRu-fp-X3t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J6-9S-fln" userLabel="Button Half Up 2">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="c88-Tm-cd6"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="55" id="oz1-eW-mQm"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="vmi-Bn-Z2l"/>
+                                </constraints>
+                                <state key="normal" image="UpHalf"/>
+                                <connections>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gS3-gw-MKA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K07-Nc-73t" userLabel="Button Half Down 2">
@@ -169,7 +180,7 @@
                                 </constraints>
                                 <state key="normal" image="DownHalf"/>
                                 <connections>
-                                    <action selector="moveDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pgb-6l-19R"/>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JrY-fL-YOH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPa-zN-XP0" userLabel="Button Full Up">
@@ -180,7 +191,7 @@
                                 </constraints>
                                 <state key="normal" image="UpFull"/>
                                 <connections>
-                                    <action selector="moveDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XK7-zy-P7O"/>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CEc-Tl-Fxz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1r-EO-rgi" userLabel="Button Result">
@@ -189,6 +200,8 @@
                                 <state key="normal" image="NextRoundSuccess"/>
                                 <connections>
                                     <action selector="NextRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0F0-jX-Po7"/>
+                                    <action selector="nextRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Adh-iS-Dko"/>
+                                    <segue destination="2Nu-dj-yvZ" kind="show" id="Esw-in-X7T"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Auz-oE-N6z" userLabel="Label Time">
@@ -207,17 +220,6 @@
                                 <color key="textColor" red="0.30963268874050892" green="0.62613178908295086" blue="0.74703525641025648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J6-9S-fln" userLabel="Button Half Up 2">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="c88-Tm-cd6"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="55" id="oz1-eW-mQm"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="vmi-Bn-Z2l"/>
-                                </constraints>
-                                <state key="normal" image="UpHalf"/>
-                                <connections>
-                                    <action selector="moveUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhE-us-4Id"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.090012400950000002" green="0.15026851660000001" blue="0.28439852760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -286,26 +288,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="THh-wu-NL9" userLabel="Tap Gesture Recognizer 1">
                     <connections>
-                        <segue destination="61l-eF-CnA" kind="presentation" modalTransitionStyle="coverVertical" id="mMz-GP-9aT"/>
+                        <segue destination="61l-eF-CnA" kind="presentation" identifier="segueLabel1" modalTransitionStyle="coverVertical" id="mMz-GP-9aT"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="jZA-Qt-zES" userLabel="Tap Gesture Recognizer 2">
                     <connections>
-                        <segue destination="61l-eF-CnA" kind="presentation" id="bus-Na-JI7"/>
+                        <segue destination="61l-eF-CnA" kind="presentation" identifier="segueLabel2" id="bus-Na-JI7"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="259-CR-P3D" userLabel="Tap Gesture Recognizer 3">
                     <connections>
-                        <segue destination="61l-eF-CnA" kind="presentation" id="xNx-Ua-2tb"/>
+                        <segue destination="61l-eF-CnA" kind="presentation" identifier="segueLabel3" id="xNx-Ua-2tb"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="AB2-Ct-sY5" userLabel="Tap Gesture Recognizer 4">
                     <connections>
-                        <segue destination="61l-eF-CnA" kind="presentation" id="E7Z-Is-KHD"/>
+                        <segue destination="61l-eF-CnA" kind="presentation" identifier="segueLabel4" id="E7Z-Is-KHD"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="65" y="300"/>
+            <point key="canvasLocation" x="64.799999999999997" y="300"/>
         </scene>
         <!--View Controller Web Modal-->
         <scene sceneID="N4s-kS-wMQ">
@@ -324,7 +326,7 @@
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggH-49-yqh" userLabel="Button Cancel">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="7NL-Jh-fYi"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="7NL-Jh-fYi"/>
                                 </constraints>
                                 <state key="normal" image="WebViewBar"/>
                                 <connections>
@@ -344,18 +346,81 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="lml-RM-ROw" id="tqW-qa-vhh"/>
+                        <outlet property="webView" destination="lml-RM-ROw" id="aBt-wL-fes"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1bM-Me-PEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="760.79999999999995" y="300"/>
+            <point key="canvasLocation" x="850" y="-1"/>
+        </scene>
+        <!--View Controller Game Result-->
+        <scene sceneID="woF-vN-euh">
+            <objects>
+                <viewController id="2Nu-dj-yvZ" customClass="ViewControllerGameResult" customModule="BoutTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6by-Sz-yVZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="HXI-Tn-Gpd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yk6-Gp-g7B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84T-tb-QhC" userLabel="Label Your Score">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="9Cl-2N-vZt"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="MXX-Zn-LPr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.30963268869999999" green="0.6261317891" blue="0.74703525640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6/6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mWQ-lD-tvU" userLabel="Label Score">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="gOC-Cf-ZTT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1L-UI-nMl" userLabel="Button Play Again">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jSR-yE-pIY"/>
+                                </constraints>
+                                <state key="normal" image="PlayAgain"/>
+                                <connections>
+                                    <action selector="playAgain" destination="2Nu-dj-yvZ" eventType="touchUpInside" id="Kgn-Or-DnI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.090012400950000002" green="0.15026851660000001" blue="0.28439852760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HXI-Tn-Gpd" firstAttribute="top" secondItem="d1L-UI-nMl" secondAttribute="bottom" constant="250" id="4gF-aK-yqw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="84T-tb-QhC" secondAttribute="trailing" constant="10" id="8ml-kG-LDi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mWQ-lD-tvU" secondAttribute="trailing" constant="60" id="AEQ-6Q-K57"/>
+                            <constraint firstItem="84T-tb-QhC" firstAttribute="leading" secondItem="Yk6-Gp-g7B" secondAttribute="leadingMargin" constant="10" id="Ao1-sW-FDM"/>
+                            <constraint firstItem="d1L-UI-nMl" firstAttribute="leading" secondItem="Yk6-Gp-g7B" secondAttribute="leadingMargin" constant="70" id="Cme-Tr-MbS"/>
+                            <constraint firstItem="mWQ-lD-tvU" firstAttribute="centerX" secondItem="Yk6-Gp-g7B" secondAttribute="centerX" id="F5H-6s-tGW"/>
+                            <constraint firstItem="mWQ-lD-tvU" firstAttribute="leading" secondItem="Yk6-Gp-g7B" secondAttribute="leadingMargin" constant="60" id="HWw-cA-cBe"/>
+                            <constraint firstItem="mWQ-lD-tvU" firstAttribute="top" secondItem="84T-tb-QhC" secondAttribute="bottom" constant="10" id="MNw-uK-Z9X"/>
+                            <constraint firstItem="d1L-UI-nMl" firstAttribute="top" secondItem="mWQ-lD-tvU" secondAttribute="bottom" constant="70" id="X6g-kv-cQ3"/>
+                            <constraint firstItem="84T-tb-QhC" firstAttribute="centerX" secondItem="Yk6-Gp-g7B" secondAttribute="centerX" id="ioN-TC-7Mp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d1L-UI-nMl" secondAttribute="trailing" constant="70" id="pAf-w2-uAv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelScore" destination="mWQ-lD-tvU" id="sf3-bg-oVc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3QF-FH-cIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850" y="719"/>
         </scene>
     </scenes>
     <resources>
         <image name="DownFull" width="52" height="152"/>
         <image name="DownHalf" width="52" height="76"/>
         <image name="NextRoundSuccess" width="186" height="47"/>
+        <image name="PlayAgain" width="150" height="47"/>
         <image name="UpFull" width="52" height="152"/>
         <image name="UpHalf" width="52" height="76"/>
         <image name="WebViewBar" width="444" height="55"/>

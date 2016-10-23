@@ -43,27 +43,78 @@ class ViewController: UIViewController {
     }
 
     // MARK: Action Methods
-    
-    @IBAction func moveUp(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func moveDown(_ sender: UIButton) {
-    
+    @IBAction func move(_ sender: UIButton) {
+        do {
+            if sender === buttonFullUp {
+                try gameModel.roundHistoricalEvents[3].moveUp()
+                try gameModel.roundHistoricalEvents[2].moveDown()
+            }
+            
+            if sender === buttonHalfUpTwo {
+                try gameModel.roundHistoricalEvents[2].moveUp()
+                try gameModel.roundHistoricalEvents[1].moveDown()
+            }
+            
+            if sender === buttonHalfUpOne {
+                try gameModel.roundHistoricalEvents[1].moveUp()
+                try gameModel.roundHistoricalEvents[0].moveDown()
+            }
+            
+            if sender === buttonFullDown {
+                try gameModel.roundHistoricalEvents[0].moveDown()
+                try gameModel.roundHistoricalEvents[1].moveUp()
+            }
+            
+            if sender === buttonHalfDownOne {
+                try gameModel.roundHistoricalEvents[1].moveDown()
+                try gameModel.roundHistoricalEvents[2].moveUp()
+            }
+            
+            if sender === buttonHalfDownTwo {
+                try gameModel.roundHistoricalEvents[2].moveDown()
+                try gameModel.roundHistoricalEvents[3].moveUp()
+            }
+            
+            gameModel.resetRoundPositions()
+            try displayHistoricalEvents()
+            
+        } catch BoutTimeError.cannotMoveUp {
+            showAlert("Alert", message: "Cannot move the event up.")
+        } catch let error {
+            showAlert("Error", message: "Unexpected error occurred moving the event. \(error.localizedDescription)")
+        }
     }
     
     @IBAction func nextRound(_ sender: AnyObject) {
-    
-    }
-    
-    override var canBecomeFirstResponder : Bool {
-        return true
+        if gameModel.gameStatus == GameStatus.endOfGame {
+            //FIXME: Open new controller with result
+        }
+        else {
+            newRound()
+        }
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             // FIXME: Implement the Round Solution in the game
-            self.labelInfo.text = "Shaken, not stirred"
+            self.labelInfo.text = "Tap events to learn more"
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let webModalViewController = segue.destination as! ViewControllerWebModal;
+        
+        if (segue.identifier == "segueLabel1") {
+            webModalViewController.loadUrl(eventsUrl: gameModel.roundHistoricalEvents[0].url)
+        }
+        if (segue.identifier == "segueLabel2") {
+            webModalViewController.loadUrl(eventsUrl: gameModel.roundHistoricalEvents[1].url)
+        }
+        if (segue.identifier == "segueLabel3") {
+            webModalViewController.loadUrl(eventsUrl: gameModel.roundHistoricalEvents[2].url)
+        }
+        if (segue.identifier == "segueLabel4") {
+            webModalViewController.loadUrl(eventsUrl: gameModel.roundHistoricalEvents[3].url)
         }
     }
     
@@ -72,20 +123,43 @@ class ViewController: UIViewController {
         soundModel.loadGameSounds()
         gameModel.startGame()
         newRound()
-        buttonResult.isHidden = true
         setImagesOnHighlightedButtons()
     }
     
     func newRound() {
-        displayHistoricalEvents()
+        gameModel.gameStatus = gameModel.nextRound()
+        buttonResult.isHidden = true
         setTimeoutOnRound()
+        do {
+            try displayHistoricalEvents()
+        }
+        catch BoutTimeError.undefinedPosition {
+            showAlert("Error", message: "Error displaying historical events")
+        }
+        catch let error {
+            showAlert("Error", message: "Unexpected error occurred starting new round. \(error.localizedDescription)")
+        }
     }
     
-    func displayHistoricalEvents() {
-        labelEvent1.text = gameModel.roundHistoricalEvents[0].text
-        labelEvent2.text = gameModel.roundHistoricalEvents[1].text
-        labelEvent3.text = gameModel.roundHistoricalEvents[2].text
-        labelEvent4.text = gameModel.roundHistoricalEvents[3].text
+    func displayHistoricalEvents() throws {
+        for historicalEvent in gameModel.roundHistoricalEvents {
+            switch historicalEvent.currentPosition {
+            case 0:
+                labelEvent1.text = historicalEvent.text
+                break
+            case 1:
+                labelEvent2.text = historicalEvent.text
+                break
+            case 2:
+                labelEvent3.text = historicalEvent.text
+                break
+            case 3:
+                labelEvent4.text = historicalEvent.text
+                break
+            default:
+                throw BoutTimeError.undefinedPosition
+            }
+        }
     }
     
     func setImagesOnHighlightedButtons() {
@@ -99,16 +173,11 @@ class ViewController: UIViewController {
     
     func showAlert(_ title: String, message: String? = nil, style: UIAlertControllerStyle = .alert) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
-        
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: dismissAlert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         
         alertController.addAction(okAction)
         
         present(alertController, animated: true, completion: nil)
-    }
-    
-    func dismissAlert(_ sender: UIAlertAction) {
-        // TODO: Implement method
     }
     
     func setTimeoutOnRound() {
@@ -128,7 +197,7 @@ class ViewController: UIViewController {
     
     func timeoutRound(seconds: Int) {
         gameWorkItem = DispatchWorkItem(qos: .default, flags: .enforceQoS) {
-            
+            // FIXME: Implement the Round Solution in the game
         }
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(seconds), execute: gameWorkItem!)

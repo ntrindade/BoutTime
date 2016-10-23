@@ -31,20 +31,23 @@ class HistoricalEvent: HistoricalEventType, Moveable, Equatable {
     
     func moveUp() throws {
         
-        if currentPosition < highestPosition {
-            currentPosition += movement
+        if currentPosition > lowestPosition {
+            currentPosition -= movement
         }
-        
-        throw BoutTimeError.cannotMoveUp("Cannot move Up")
+        else {
+            throw BoutTimeError.cannotMoveUp
+        }
     }
     
     func moveDown() throws {
         
-        if currentPosition > lowestPosition {
-            currentPosition -= movement
+        if currentPosition < highestPosition {
+            currentPosition += movement
+            return
         }
-        
-        throw BoutTimeError.cannotMoveDown("Cannot move Down")
+        else {
+            throw BoutTimeError.cannotMoveDown
+        }
     }
     
     func equals<T>(_ other: T) -> Bool where T: HistoricalEvent {
