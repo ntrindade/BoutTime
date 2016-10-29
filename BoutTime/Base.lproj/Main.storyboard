@@ -321,9 +321,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lml-RM-ROw">
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p0x-02-Vg2">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggH-49-yqh" userLabel="Button Cancel">
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="7NL-Jh-fYi"/>
@@ -333,25 +333,31 @@
                                     <action selector="dismissWebModal" destination="61l-eF-CnA" eventType="touchUpInside" id="qpL-Lg-XfG"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ekK-Va-j2B">
+                                <color key="color" red="0.090012400950000002" green="0.15026851660000001" blue="0.28439852760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.090012400950000002" green="0.15026851660000001" blue="0.28439852760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ggH-49-yqh" firstAttribute="top" secondItem="MKg-Mx-Rjm" secondAttribute="bottom" constant="10" id="1fy-58-5RA"/>
+                            <constraint firstItem="p0x-02-Vg2" firstAttribute="leading" secondItem="cFB-4W-HFf" secondAttribute="leading" constant="5" id="58n-gh-yur"/>
+                            <constraint firstItem="ekK-Va-j2B" firstAttribute="centerX" secondItem="cFB-4W-HFf" secondAttribute="centerX" id="8ER-u4-Sxm"/>
                             <constraint firstItem="ggH-49-yqh" firstAttribute="leading" secondItem="cFB-4W-HFf" secondAttribute="leading" constant="5" id="9fn-to-016"/>
-                            <constraint firstItem="lml-RM-ROw" firstAttribute="leading" secondItem="cFB-4W-HFf" secondAttribute="leading" constant="5" id="Ds2-H4-a0K"/>
-                            <constraint firstAttribute="trailing" secondItem="lml-RM-ROw" secondAttribute="trailing" constant="5" id="EjU-NL-srS"/>
-                            <constraint firstItem="lml-RM-ROw" firstAttribute="top" secondItem="ggH-49-yqh" secondAttribute="bottom" constant="5" id="Yl0-NA-n0m"/>
-                            <constraint firstItem="mBb-Gn-tD8" firstAttribute="top" secondItem="lml-RM-ROw" secondAttribute="bottom" constant="5" id="j0T-Vn-5vq"/>
+                            <constraint firstItem="ekK-Va-j2B" firstAttribute="centerY" secondItem="cFB-4W-HFf" secondAttribute="centerY" id="MYF-QQ-r8n"/>
+                            <constraint firstItem="mBb-Gn-tD8" firstAttribute="top" secondItem="p0x-02-Vg2" secondAttribute="bottom" constant="5" id="Y6s-xk-3eG"/>
+                            <constraint firstAttribute="trailing" secondItem="p0x-02-Vg2" secondAttribute="trailing" constant="5" id="cGa-vv-ep1"/>
                             <constraint firstAttribute="trailing" secondItem="ggH-49-yqh" secondAttribute="trailing" constant="5" id="si1-G8-v4P"/>
+                            <constraint firstItem="p0x-02-Vg2" firstAttribute="top" secondItem="ggH-49-yqh" secondAttribute="bottom" constant="5" id="wHf-f0-Otj"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="webView" destination="lml-RM-ROw" id="aBt-wL-fes"/>
+                        <outlet property="activityIndicator" destination="ekK-Va-j2B" id="phw-SU-dey"/>
+                        <outlet property="viewContainer" destination="p0x-02-Vg2" id="jxS-30-P5D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1bM-Me-PEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="850" y="-1"/>
+            <point key="canvasLocation" x="848.79999999999995" y="-1.3493253373313345"/>
         </scene>
         <!--View Controller Game Result-->
         <scene sceneID="woF-vN-euh">

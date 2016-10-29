@@ -102,19 +102,17 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let webModalViewController = segue.destination as! ViewControllerWebModal;
+        let urlSegues: [String: String] =
+            [
+                "segueLabel1": gameModel.roundHistoricalEvents[0].urlString,
+                "segueLabel2": gameModel.roundHistoricalEvents[1].urlString,
+                "segueLabel3": gameModel.roundHistoricalEvents[2].urlString,
+                "segueLabel4": gameModel.roundHistoricalEvents[3].urlString,
+            ]
         
-        if (segue.identifier == "segueLabel1") {
-            webModalViewController.loadUrl(eventsUrl: gameModel.roundHistoricalEvents[0].url)
-        }
-        if (segue.identifier == "segueLabel2") {
-            webModalViewController.loadUrl(eventsUrl: gameModel.roundHistoricalEvents[1].url)
-        }
-        if (segue.identifier == "segueLabel3") {
-            webModalViewController.loadUrl(eventsUrl: gameModel.roundHistoricalEvents[2].url)
-        }
-        if (segue.identifier == "segueLabel4") {
-            webModalViewController.loadUrl(eventsUrl: gameModel.roundHistoricalEvents[3].url)
+        if let webModalViewController = segue.destination as? ViewControllerWebModal {
+            webModalViewController.urlString = urlSegues[segue.identifier!]!
+            webModalViewController.loadUrl()
         }
     }
     

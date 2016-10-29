@@ -12,7 +12,7 @@ class HistoricalEvent: HistoricalEventType, Moveable, Equatable {
     let text: String
     let year: Int
     let month: Month
-    let url: URL
+    let urlString: String
     
     let lowestPosition = 0
     let highestPosition = 3
@@ -22,10 +22,10 @@ class HistoricalEvent: HistoricalEventType, Moveable, Equatable {
     
     let movement = 1
     
-    required init(text: String, year: Int, month: Month, url: URL) {
+    required init(text: String, year: Int, month: Month, urlString: String) {
         self.text = text
         self.year = year
-        self.url = url
+        self.urlString = urlString
         self.month = month
     }
     

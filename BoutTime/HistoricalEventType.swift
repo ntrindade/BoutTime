@@ -12,7 +12,7 @@ protocol HistoricalEventType {
     var text: String { get }
     var year: Int { get }
     var month: Month { get }
-    var url: URL { get }
+    var urlString: String { get }
     
     var lowestPosition: Int { get }
     var highestPosition: Int { get }
@@ -20,5 +20,5 @@ protocol HistoricalEventType {
     var currentPosition: Int { get set }
     var correctPosition: Int { get set }
     
-    init(text: String, year: Int, month: Month, url: URL)
+    init(text: String, year: Int, month: Month, urlString: String)
 }
