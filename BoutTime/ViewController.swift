@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     
     var gameWorkItem: DispatchWorkItem? = nil
     var timeoutDisplay: Int = 0
-    var timer: Timer?
+    var timer: Timer? = nil
+    var dateTimeConverter: DateTimeConverter = DateTimeConverter()
     
     @IBOutlet weak var labelEvent1: UILabel!
     @IBOutlet weak var labelEvent2: UILabel!
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        soundModel.loadGameSounds()
         startNewGame()
     }
     
@@ -45,6 +47,11 @@ class ViewController: UIViewController {
     // MARK: Action Methods
     @IBAction func move(_ sender: UIButton) {
         do {
+            
+            if timeoutDisplay == -1 {
+                return
+            }
+            
             if sender === buttonFullUp {
                 try gameModel.roundHistoricalEvents[3].moveUp()
                 try gameModel.roundHistoricalEvents[2].moveDown()
@@ -85,20 +92,35 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func nextRound(_ sender: AnyObject) {
-        if gameModel.gameStatus == GameStatus.endOfGame {
-            //FIXME: Open new controller with result
-        }
-        else {
-            newRound()
-        }
+    
+    @IBAction func unwindToNewGame(segue: UIStoryboardSegue) {
+        startNewGame()
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            // FIXME: Implement the Round Solution in the game
-            self.labelInfo.text = "Tap events to learn more"
+            labelInfo.text = "Tap events to learn more"
+            suspendTimeout()
+            checkRoundResult()
         }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier.contains("segueLabel") {
+            return timeoutDisplay == -1
+        }
+        
+        if identifier == "segueFinalScore" {
+            if gameModel.gameStatus == GameStatus.endOfGame {
+                return true
+            }
+            else {
+                newRound()
+                return false
+            }
+        }
+        
+        return true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -114,20 +136,28 @@ class ViewController: UIViewController {
             webModalViewController.urlString = urlSegues[segue.identifier!]!
             webModalViewController.loadUrl()
         }
+        
+        if let gameResultViewController = segue.destination as? ViewControllerGameResult {
+            gameResultViewController.score = "\(gameModel.correctRounds)/\(gameModel.numberOfRoundsPerGame)"
+        }
     }
     
     // MARK: Helper Methods
     func startNewGame() {
-        soundModel.loadGameSounds()
         gameModel.startGame()
         newRound()
         setImagesOnHighlightedButtons()
     }
     
     func newRound() {
-        gameModel.gameStatus = gameModel.nextRound()
+        
+        labelTime.isHidden = false
         buttonResult.isHidden = true
+        gameModel.gameStatus = gameModel.nextRound()
+        labelInfo.text = "Shake to complete"
+        
         setTimeoutOnRound()
+        
         do {
             try displayHistoricalEvents()
         }
@@ -137,6 +167,21 @@ class ViewController: UIViewController {
         catch let error {
             showAlert("Error", message: "Unexpected error occurred starting new round. \(error.localizedDescription)")
         }
+    }
+    
+    func checkRoundResult() {
+        if gameModel.isRoundCorrect() {
+            buttonResult.setImage(#imageLiteral(resourceName: "NextRoundSuccess"), for: UIControlState.normal)
+            soundModel.playCorrectSound()
+        } else {
+            buttonResult.setImage(#imageLiteral(resourceName: "NextRoundFail"), for: UIControlState.normal)
+            soundModel.playIncorrectSound()
+        }
+        labelTime.isHidden = true
+        buttonResult.isHidden = false
+        gameWorkItem = nil
+        timeoutDisplay = -1
+        timer?.invalidate()
     }
     
     func displayHistoricalEvents() throws {
@@ -180,22 +225,21 @@ class ViewController: UIViewController {
     
     func setTimeoutOnRound() {
         timeoutDisplay = gameModel.roundTimeoutInSeconds
-        let timerUpdateInSeconds = 1.0
-        timer = Timer.scheduledTimer(timeInterval: timerUpdateInSeconds, target: self, selector: #selector(ViewController.updateTimer), userInfo: nil, repeats: true)
-        
+        labelTime.text = dateTimeConverter.secondsToHoursMinutesSeconds(timeoutDisplay)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.updateTimer), userInfo: labelTime.text, repeats: true)
         timeoutRound(seconds: gameModel.roundTimeoutInSeconds)
     }
     
     func updateTimer() {
-        if timeoutDisplay >= 0 {
-            labelTime.text = DateTimeConverter.secondsToHoursMinutesSeconds(timeoutDisplay)
-            timeoutDisplay -= 1
+        timeoutDisplay -= 1
+        if timeoutDisplay > -1 {
+            labelTime.text = dateTimeConverter.secondsToHoursMinutesSeconds(timeoutDisplay)
         }
     }
     
     func timeoutRound(seconds: Int) {
         gameWorkItem = DispatchWorkItem(qos: .default, flags: .enforceQoS) {
-            // FIXME: Implement the Round Solution in the game
+            self.checkRoundResult()
         }
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(seconds), execute: gameWorkItem!)

@@ -12,8 +12,7 @@ class ViewControllerGameResult: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        labelScore.text = score
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,8 +21,9 @@ class ViewControllerGameResult: UIViewController {
     }
 
     @IBOutlet weak var labelScore: UILabel!
+    var score: String = ""
     
     @IBAction func playAgain() {
-        
+        dismiss(animated: true, completion: nil)
     }
 }

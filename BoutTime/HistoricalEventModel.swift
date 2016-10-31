@@ -20,7 +20,7 @@ struct HistoricalEventModel {
             HistoricalEvent(text: "FIFA World Cup held in South Africa and won by Spain", year: 2010, month: .june, urlString: "http://en.wikipedia.org/wiki/2010_FIFA_World_Cup"),
             HistoricalEvent(text: "Summer Olympics held in London, United Kingdom.", year: 2012, month: .august, urlString: "http://en.wikipedia.org/wiki/2012_Summer_Olympics"),
             HistoricalEvent(text: "Summer Olympics held in Rio de Janeiro, Brazil", year: 2016, month: .august, urlString: "http://en.wikipedia.org/wiki/2016_Summer_Olympics"),
-            HistoricalEvent(text: "Winter Olympics held in Sochi, Russia", year: 2016, month: .august, urlString: "http://en.wikipedia.org/wiki/2016_Summer_Olympics"),
+            HistoricalEvent(text: "Winter Olympics held in Sochi, Russia", year: 2014, month: .february, urlString: "https://en.wikipedia.org/wiki/2014_Winter_Olympics"),
             HistoricalEvent(text: "UEFA Euro Cup held in Austria & Switzerland and won by Spain.", year: 2008, month: .june, urlString: "http://en.wikipedia.org/wiki/UEFA_Euro_2008"),
             HistoricalEvent(text: "UEFA Euro Cup held in Poland & Ukraine and won by Spain", year: 2012, month: .june, urlString: "http://en.wikipedia.org/wiki/UEFA_Euro_2012"),
             HistoricalEvent(text: "Copa América held in Argentina and won by Uruguay", year: 2011, month: .july, urlString: "http://en.wikipedia.org/wiki/2011_Copa_Am%C3%A9rica"),

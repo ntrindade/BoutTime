@@ -45,12 +45,14 @@ class GameModel {
         roundHistoricalEvents = historicalEventModel.resetHistoricalEvents(roundHistoricalEvents)
     }
     
-    func roundResultIsCorrect() -> Bool {
+    func isRoundCorrect() -> Bool {
         for roundHistoricalEvent in roundHistoricalEvents {
             if roundHistoricalEvent.currentPosition != roundHistoricalEvent.correctPosition {
+                // On incorrect result return
                 return false
             }
         }
+        correctRounds += 1
         return true
     }
 }

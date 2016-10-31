@@ -199,9 +199,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="NextRoundSuccess"/>
                                 <connections>
-                                    <action selector="NextRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0F0-jX-Po7"/>
-                                    <action selector="nextRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Adh-iS-Dko"/>
-                                    <segue destination="2Nu-dj-yvZ" kind="show" id="Esw-in-X7T"/>
+                                    <segue destination="2Nu-dj-yvZ" kind="presentation" identifier="segueFinalScore" id="lbx-j9-xlM"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Auz-oE-N6z" userLabel="Label Time">
@@ -276,7 +274,7 @@
                         <outlet property="buttonHalfDownTwo" destination="K07-Nc-73t" id="yJl-f9-vVn"/>
                         <outlet property="buttonHalfUpOne" destination="Mqq-am-YeL" id="YhQ-nc-Tzd"/>
                         <outlet property="buttonHalfUpTwo" destination="4J6-9S-fln" id="IlV-gz-eMa"/>
-                        <outlet property="buttonResult" destination="r1r-EO-rgi" id="bdD-eT-qo3"/>
+                        <outlet property="buttonResult" destination="r1r-EO-rgi" id="JVm-g4-NUN"/>
                         <outlet property="labelEvent1" destination="gyY-O9-HYt" id="Mkw-oA-XW7"/>
                         <outlet property="labelEvent2" destination="JdP-Ss-XO0" id="mxL-eJ-l4c"/>
                         <outlet property="labelEvent3" destination="lJS-p5-Tba" id="baC-cH-jre"/>
@@ -394,7 +392,8 @@
                                 </constraints>
                                 <state key="normal" image="PlayAgain"/>
                                 <connections>
-                                    <action selector="playAgain" destination="2Nu-dj-yvZ" eventType="touchUpInside" id="Kgn-Or-DnI"/>
+                                    <action selector="playAgain" destination="2Nu-dj-yvZ" eventType="touchUpInside" id="tuh-yv-Ajb"/>
+                                    <segue destination="PjG-Gw-tbE" kind="unwind" unwindAction="unwindToNewGameWithSegue:" id="BUf-rW-DSe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -418,6 +417,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3QF-FH-cIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PjG-Gw-tbE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="850" y="719"/>
         </scene>
