@@ -23,6 +23,7 @@ class HistoricalEvent: HistoricalEventType, Moveable, Equatable {
     let movement = 1
     
     required init(text: String, year: Int, month: Month, urlString: String) {
+        
         self.text = text
         self.year = year
         self.urlString = urlString
@@ -51,11 +52,13 @@ class HistoricalEvent: HistoricalEventType, Moveable, Equatable {
     }
     
     func equals<T>(_ other: T) -> Bool where T: HistoricalEvent {
+        
         return text == other.text && year == other.year && month == other.month
     }
 }
 
 func ==<T>(lhs: T, rhs: T) -> Bool where T: HistoricalEvent {
+    
     return lhs.equals(rhs)
 }
 

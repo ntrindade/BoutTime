@@ -26,7 +26,6 @@ struct HistoricalEventModel {
             HistoricalEvent(text: "Copa América held in Argentina and won by Uruguay", year: 2011, month: .july, urlString: "http://en.wikipedia.org/wiki/2011_Copa_Am%C3%A9rica"),
             HistoricalEvent(text: "UEFA Euro Cup held in France and won by Portugal", year: 2016, month: .june, urlString: "http://en.wikipedia.org/wiki/UEFA_Euro_2016"),
             HistoricalEvent(text: "Winter Olympics held in Vancouver, British Columbia, Canada", year: 2010, month: .february, urlString: "http://en.wikipedia.org/wiki/2010_Winter_Olympics"),
-            HistoricalEvent(text: "Winter Olympics held in Sochi, Russia", year: 2014, month: .february, urlString: "http://en.wikipedia.org/wiki/2014_Winter_Olympics"),
             HistoricalEvent(text: "Copa América held in Peru and won by Brazil", year: 2004, month: .july, urlString: "http://en.wikipedia.org/wiki/2004_Copa_Am%C3%A9rica"),
             HistoricalEvent(text: "Copa América held in Venezuela and won by Brazil", year: 2007, month: .july, urlString: "http://en.wikipedia.org/wiki/2007_Copa_Am%C3%A9rica"),
             HistoricalEvent(text: "Copa América held in Chile and won by Chile", year: 2015, month: .july, urlString: "http://en.wikipedia.org/wiki/2015_Copa_Am%C3%A9rica"),
@@ -78,10 +77,12 @@ struct HistoricalEventModel {
         ]
     
     func getHistoricalEvents(_ numberOfHistoricalEvents: Int) -> [HistoricalEvent] {
+        
         return getHistoricalEvents(numberOfHistoricalEvents, historicalEvents: staticHistoricalEvents)
     }
     
     func getHistoricalEvents(_ numberOfHistoricalEvents: Int, historicalEvents: [HistoricalEvent]) -> [HistoricalEvent] {
+        
         var localHistoricalEvents: [HistoricalEvent] = []
         var indexesAlreadyPicked: [Int] = []
         
@@ -97,7 +98,7 @@ struct HistoricalEventModel {
         return localHistoricalEvents
     }
     
-    func sortHistoricalEvents(_ historicalEvents: [HistoricalEvent]) -> [HistoricalEvent] {
+    func sortHistoricalEventsByYearMonth(_ historicalEvents: [HistoricalEvent]) -> [HistoricalEvent] {
         
         var historicalEventsSorted = historicalEvents.sorted { historicalEvent1, historicalEvent2 in
             if historicalEvent1.year == historicalEvent2.year {
@@ -115,7 +116,8 @@ struct HistoricalEventModel {
         return historicalEventsSorted
     }
     
-    func resetHistoricalEvents(_ historicalEvents:[HistoricalEvent]) -> [HistoricalEvent] {
+    func sortHistoricalEventsByCurrentPosition(_ historicalEvents:[HistoricalEvent]) -> [HistoricalEvent] {
+        
         var historicalEventsSorted = historicalEvents.sorted { historicalEvent1, historicalEvent2 in
             return historicalEvent1.currentPosition < historicalEvent2.currentPosition
         }

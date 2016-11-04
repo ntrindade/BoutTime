@@ -8,6 +8,7 @@
 import AudioToolbox
 
 struct SoundFile {
+    
     var name: SoundType
     var soundId: SystemSoundID
 }

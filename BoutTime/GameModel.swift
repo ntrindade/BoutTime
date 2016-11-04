@@ -12,7 +12,7 @@ class GameModel {
 
     let numberOfRoundsPerGame = 6
     let numberOfHistoricalEventsPerRound = 4
-    let roundTimeoutInSeconds = 60
+    let roundTimeoutInSeconds = 5
     let historicalEventModel = HistoricalEventModel()
     
     var gameStatus: GameStatus = GameStatus.nextQuestion
@@ -30,25 +30,25 @@ class GameModel {
     }
     
     func nextRound() -> GameStatus {
+        
+        roundHistoricalEvents = historicalEventModel.getHistoricalEvents(numberOfHistoricalEventsPerRound, historicalEvents: gameHistoricalEvents)
+        sortedHistoricalEvents = historicalEventModel.sortHistoricalEventsByYearMonth(roundHistoricalEvents)
+        gameHistoricalEvents.removeObjectsInArray(roundHistoricalEvents)
+        
         if gameHistoricalEvents.count == 0 {
             return GameStatus.endOfGame
         }
-        
-        roundHistoricalEvents = historicalEventModel.getHistoricalEvents(numberOfHistoricalEventsPerRound, historicalEvents: gameHistoricalEvents)
-        sortedHistoricalEvents = historicalEventModel.sortHistoricalEvents(roundHistoricalEvents)
-        gameHistoricalEvents.removeObjectsInArray(roundHistoricalEvents)
-        
         return GameStatus.nextQuestion
     }
 
     func resetRoundPositions() {
-        roundHistoricalEvents = historicalEventModel.resetHistoricalEvents(roundHistoricalEvents)
+        roundHistoricalEvents = historicalEventModel.sortHistoricalEventsByCurrentPosition(roundHistoricalEvents)
     }
     
     func isRoundCorrect() -> Bool {
+        
         for roundHistoricalEvent in roundHistoricalEvents {
             if roundHistoricalEvent.currentPosition != roundHistoricalEvent.correctPosition {
-                // On incorrect result return
                 return false
             }
         }

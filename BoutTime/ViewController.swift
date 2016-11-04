@@ -46,6 +46,7 @@ class ViewController: UIViewController {
 
     // MARK: Action Methods
     @IBAction func move(_ sender: UIButton) {
+        
         do {
             
             if timeoutDisplay == -1 {
@@ -87,6 +88,8 @@ class ViewController: UIViewController {
             
         } catch BoutTimeError.cannotMoveUp {
             showAlert("Alert", message: "Cannot move the event up.")
+        } catch BoutTimeError.cannotMoveDown {
+            showAlert("Alert", message: "Cannot move the event down.")
         } catch let error {
             showAlert("Error", message: "Unexpected error occurred moving the event. \(error.localizedDescription)")
         }
@@ -94,18 +97,20 @@ class ViewController: UIViewController {
     
     
     @IBAction func unwindToNewGame(segue: UIStoryboardSegue) {
+        
         startNewGame()
     }
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
-        if motion == .motionShake {
-            labelInfo.text = "Tap events to learn more"
+        
+        if motion == .motionShake && buttonResult.isHidden == true {
             suspendTimeout()
             checkRoundResult()
         }
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
         if identifier.contains("segueLabel") {
             return timeoutDisplay == -1
         }
@@ -124,6 +129,7 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         let urlSegues: [String: String] =
             [
                 "segueLabel1": gameModel.roundHistoricalEvents[0].urlString,
@@ -143,7 +149,9 @@ class ViewController: UIViewController {
     }
     
     // MARK: Helper Methods
+    
     func startNewGame() {
+        
         gameModel.startGame()
         newRound()
         setImagesOnHighlightedButtons()
@@ -170,6 +178,14 @@ class ViewController: UIViewController {
     }
     
     func checkRoundResult() {
+        
+        labelInfo.text = "Tap events to learn more"
+        timeoutDisplay = -1
+        timer?.invalidate()
+        labelTime.isHidden = true
+        buttonResult.isHidden = false
+        gameWorkItem = nil
+        
         if gameModel.isRoundCorrect() {
             buttonResult.setImage(#imageLiteral(resourceName: "NextRoundSuccess"), for: UIControlState.normal)
             soundModel.playCorrectSound()
@@ -177,14 +193,10 @@ class ViewController: UIViewController {
             buttonResult.setImage(#imageLiteral(resourceName: "NextRoundFail"), for: UIControlState.normal)
             soundModel.playIncorrectSound()
         }
-        labelTime.isHidden = true
-        buttonResult.isHidden = false
-        gameWorkItem = nil
-        timeoutDisplay = -1
-        timer?.invalidate()
     }
     
     func displayHistoricalEvents() throws {
+        
         for historicalEvent in gameModel.roundHistoricalEvents {
             switch historicalEvent.currentPosition {
             case 0:
@@ -206,6 +218,7 @@ class ViewController: UIViewController {
     }
     
     func setImagesOnHighlightedButtons() {
+        
         buttonFullDown.setImage(#imageLiteral(resourceName: "DownFullSelected"), for: UIControlState.highlighted)
         buttonHalfUpOne.setImage(#imageLiteral(resourceName: "UpHalfSelected"), for: UIControlState.highlighted)
         buttonHalfDownOne.setImage(#imageLiteral(resourceName: "DownHalfSelected"), for: UIControlState.highlighted)
@@ -215,22 +228,23 @@ class ViewController: UIViewController {
     }
     
     func showAlert(_ title: String, message: String? = nil, style: UIAlertControllerStyle = .alert) {
+        
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        
         alertController.addAction(okAction)
-        
         present(alertController, animated: true, completion: nil)
     }
     
     func setTimeoutOnRound() {
+        
+        timeoutRound(seconds: gameModel.roundTimeoutInSeconds)
         timeoutDisplay = gameModel.roundTimeoutInSeconds
         labelTime.text = dateTimeConverter.secondsToHoursMinutesSeconds(timeoutDisplay)
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.updateTimer), userInfo: labelTime.text, repeats: true)
-        timeoutRound(seconds: gameModel.roundTimeoutInSeconds)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTimer), userInfo: labelTime.text, repeats: true)
     }
     
     func updateTimer() {
+        
         timeoutDisplay -= 1
         if timeoutDisplay > -1 {
             labelTime.text = dateTimeConverter.secondsToHoursMinutesSeconds(timeoutDisplay)
@@ -238,14 +252,17 @@ class ViewController: UIViewController {
     }
     
     func timeoutRound(seconds: Int) {
+        
         gameWorkItem = DispatchWorkItem(qos: .default, flags: .enforceQoS) {
+            print("Timeout: \(self.timeoutDisplay)")
             self.checkRoundResult()
         }
-        
+        print("Seconds to timeout: \(seconds)")
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(seconds), execute: gameWorkItem!)
     }
     
     func suspendTimeout() {
+        
         gameWorkItem?.cancel()
     }
 }
