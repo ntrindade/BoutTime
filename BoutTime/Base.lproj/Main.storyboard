@@ -24,8 +24,10 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="104" id="WTb-By-GUn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="9tB-kw-fMV"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="130" id="WTb-By-GUn"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="qBV-KV-D4K"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="xUC-wC-L0D"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Historical Event Historical Event Historical Event">
@@ -51,7 +53,9 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="104" id="8BU-v0-mZl"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="130" id="8BU-v0-mZl"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="ELX-wC-sO9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="tak-pk-2It"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="wFK-k1-peG"/>
                                 </constraints>
                                 <attributedString key="attributedText">
@@ -78,7 +82,9 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="104" id="gth-rP-ceP"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="130" id="gth-rP-ceP"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="h7i-7y-fy5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="ic9-tR-eE6"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="sng-dq-FwD"/>
                                 </constraints>
                                 <attributedString key="attributedText">
@@ -105,8 +111,10 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="104" id="00F-os-C93"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="130" id="00F-os-C93"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="7zn-OU-cO8"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="gYc-BR-bOc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="290" id="wWj-bU-AkH"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Historical Event Historical Event Historical Event">
@@ -128,10 +136,11 @@
                                     <outletCollection property="gestureRecognizers" destination="AB2-Ct-sY5" appends="YES" id="EcF-WP-SfO"/>
                                 </connections>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36S-f7-VIQ" userLabel="Button Full Down">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="36S-f7-VIQ" userLabel="Button Full Down">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="Icr-2f-Xq6"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="104" id="mUm-RW-OVS"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="43" id="Icr-2f-Xq6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="a2j-eY-YoQ"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="130" id="mUm-RW-OVS"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="sB4-ns-MyM"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="DownFull"/>
@@ -139,32 +148,35 @@
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jy6-hr-qMG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-am-YeL" userLabel="Button Half Up 1">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqq-am-YeL" userLabel="Button Half Up 1">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="0rR-7n-Uc5"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="43" id="0rR-7n-Uc5"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Vvp-Ao-lLD"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="52" id="yHn-rt-bv3"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="pAh-2n-B9b"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="65" id="yHn-rt-bv3"/>
                                 </constraints>
                                 <state key="normal" image="UpHalf"/>
                                 <connections>
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cyD-rT-SYF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi1-bK-Dcs" userLabel="Button Half Down 1">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi1-bK-Dcs" userLabel="Button Half Down 1">
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="52" id="Emk-jI-6o0"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="2hn-9g-HBO"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="65" id="Emk-jI-6o0"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="F3f-CG-bIS"/>
-                                    <constraint firstAttribute="width" constant="35" id="mxr-rf-lAC"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="43" id="mxr-rf-lAC"/>
                                 </constraints>
                                 <state key="normal" image="DownHalf"/>
                                 <connections>
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KRu-fp-X3t"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J6-9S-fln" userLabel="Button Half Up 2">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J6-9S-fln" userLabel="Button Half Up 2">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="c88-Tm-cd6"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="52" id="oz1-eW-mQm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="WBd-eO-eno"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="43" id="c88-Tm-cd6"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="65" id="oz1-eW-mQm"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="vmi-Bn-Z2l"/>
                                 </constraints>
                                 <state key="normal" image="UpHalf"/>
@@ -172,38 +184,40 @@
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gS3-gw-MKA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K07-Nc-73t" userLabel="Button Half Down 2">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K07-Nc-73t" userLabel="Button Half Down 2">
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Bru-aL-CFc"/>
-                                    <constraint firstAttribute="width" constant="35" id="G9H-2v-VV7"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="52" id="HGy-oW-Xhh"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="43" id="G9H-2v-VV7"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="65" id="HGy-oW-Xhh"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="hUp-Py-CdE"/>
                                 </constraints>
                                 <state key="normal" image="DownHalf"/>
                                 <connections>
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JrY-fL-YOH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPa-zN-XP0" userLabel="Button Full Up">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPa-zN-XP0" userLabel="Button Full Up">
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="104" id="1yO-gs-SB3"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="130" id="1yO-gs-SB3"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="Jea-YF-p5c"/>
-                                    <constraint firstAttribute="width" constant="35" id="v6V-GA-1Ya"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="43" id="v6V-GA-1Ya"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="zsf-gY-CDz"/>
                                 </constraints>
                                 <state key="normal" image="UpFull"/>
                                 <connections>
                                     <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CEc-Tl-Fxz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="center" semanticContentAttribute="spatial" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1r-EO-rgi" userLabel="Button Result">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1r-EO-rgi" userLabel="Button Result">
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="38" id="m1G-2T-HcI"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44" id="m1G-2T-HcI"/>
                                 </constraints>
                                 <state key="normal" image="NextRoundSuccess"/>
                                 <connections>
                                     <segue destination="2Nu-dj-yvZ" kind="presentation" identifier="segueFinalScore" id="lbx-j9-xlM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="Auz-oE-N6z" userLabel="Label Time">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Auz-oE-N6z" userLabel="Label Time">
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="FDQ-2Z-SWE"/>
                                 </constraints>
@@ -211,36 +225,37 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake to complete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ZdF-QY-Thl" userLabel="Label Info">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake to complete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZdF-QY-Thl" userLabel="Label Info">
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="EHR-of-boT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                 <color key="textColor" red="0.30963268874050892" green="0.62613178908295086" blue="0.74703525641025648" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.090012400950000002" green="0.15026851660000001" blue="0.28439852760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZdF-QY-Thl" secondAttribute="bottom" constant="10" id="11X-oE-yfs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZdF-QY-Thl" secondAttribute="bottom" constant="5" id="11X-oE-yfs"/>
                             <constraint firstItem="EPa-zN-XP0" firstAttribute="height" secondItem="C00-zK-osy" secondAttribute="height" id="1bX-wn-z1k"/>
                             <constraint firstItem="fi1-bK-Dcs" firstAttribute="height" secondItem="36S-f7-VIQ" secondAttribute="height" multiplier="0.5" id="1np-No-26h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="C00-zK-osy" secondAttribute="trailing" constant="40" id="2Em-19-Tae"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lJS-p5-Tba" secondAttribute="trailing" constant="40" id="2sm-Ar-hNL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="36S-f7-VIQ" secondAttribute="trailing" constant="10" id="4RJ-Xd-DUF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="r1r-EO-rgi" secondAttribute="trailing" constant="80" id="7N7-X4-8qd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r1r-EO-rgi" secondAttribute="trailing" constant="50" id="7N7-X4-8qd"/>
                             <constraint firstItem="K07-Nc-73t" firstAttribute="height" secondItem="36S-f7-VIQ" secondAttribute="height" multiplier="0.5" id="8nN-w3-l2d"/>
                             <constraint firstItem="K07-Nc-73t" firstAttribute="top" secondItem="4J6-9S-fln" secondAttribute="bottom" id="9bd-5c-BjK"/>
                             <constraint firstItem="ZdF-QY-Thl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Dg0-xb-vba"/>
                             <constraint firstItem="Auz-oE-N6z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="70" id="DyL-66-niX"/>
-                            <constraint firstItem="r1r-EO-rgi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="E2Q-Uo-Dfg"/>
-                            <constraint firstItem="4J6-9S-fln" firstAttribute="top" secondItem="fi1-bK-Dcs" secondAttribute="bottom" constant="8" id="EmS-ur-KMy" userLabel="Button Half Up 2.top = Button Half Down 1.bottom + 8"/>
+                            <constraint firstItem="r1r-EO-rgi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="E2Q-Uo-Dfg"/>
+                            <constraint firstItem="4J6-9S-fln" firstAttribute="top" secondItem="fi1-bK-Dcs" secondAttribute="bottom" constant="8" id="EmS-ur-KMy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mqq-am-YeL" secondAttribute="trailing" constant="10" id="H4q-tP-JGO"/>
                             <constraint firstItem="fi1-bK-Dcs" firstAttribute="top" secondItem="Mqq-am-YeL" secondAttribute="bottom" id="IZ6-Y1-ugj"/>
                             <constraint firstItem="gyY-O9-HYt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="In8-fO-pZt"/>
                             <constraint firstItem="36S-f7-VIQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="LeT-oY-ciK"/>
-                            <constraint firstItem="EPa-zN-XP0" firstAttribute="top" secondItem="K07-Nc-73t" secondAttribute="bottom" constant="8" id="N5g-kA-JuR" userLabel="Button Full Up.top = Button Half Down 2.bottom + 8"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="r1r-EO-rgi" secondAttribute="bottom" constant="33" id="NtK-2I-89h"/>
+                            <constraint firstItem="r1r-EO-rgi" firstAttribute="top" relation="greaterThanOrEqual" secondItem="EPa-zN-XP0" secondAttribute="bottom" constant="4" id="MwC-o0-fTq"/>
+                            <constraint firstItem="EPa-zN-XP0" firstAttribute="top" secondItem="K07-Nc-73t" secondAttribute="bottom" constant="8" id="N5g-kA-JuR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="r1r-EO-rgi" secondAttribute="bottom" constant="26" id="NtK-2I-89h"/>
                             <constraint firstItem="4J6-9S-fln" firstAttribute="height" secondItem="36S-f7-VIQ" secondAttribute="height" multiplier="0.5" id="Or1-II-IZQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JdP-Ss-XO0" secondAttribute="trailing" constant="40" id="PMi-Xy-iAX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fi1-bK-Dcs" secondAttribute="trailing" constant="10" id="REA-M2-kTr"/>
@@ -254,7 +269,7 @@
                             <constraint firstItem="Auz-oE-N6z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="C00-zK-osy" secondAttribute="bottom" constant="5" id="gDL-xd-Ztj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gyY-O9-HYt" secondAttribute="trailing" constant="40" id="gM1-QP-RKM"/>
                             <constraint firstItem="K07-Nc-73t" firstAttribute="top" secondItem="4J6-9S-fln" secondAttribute="bottom" id="ggC-ra-9gp"/>
-                            <constraint firstItem="EPa-zN-XP0" firstAttribute="top" secondItem="K07-Nc-73t" secondAttribute="bottom" constant="8" id="h0m-EG-Djr" userLabel="Button Full Up.top = Button Half Down 2.bottom + 8"/>
+                            <constraint firstItem="EPa-zN-XP0" firstAttribute="top" secondItem="K07-Nc-73t" secondAttribute="bottom" constant="8" id="h0m-EG-Djr"/>
                             <constraint firstItem="lJS-p5-Tba" firstAttribute="top" secondItem="JdP-Ss-XO0" secondAttribute="bottom" constant="8" id="h7f-S5-86X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZdF-QY-Thl" secondAttribute="trailing" constant="10" id="hGE-ak-WgN"/>
                             <constraint firstItem="fi1-bK-Dcs" firstAttribute="top" secondItem="Mqq-am-YeL" secondAttribute="bottom" id="ihN-x9-YOJ"/>
@@ -263,7 +278,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="EPa-zN-XP0" secondAttribute="trailing" constant="10" id="qSd-UF-MM9"/>
                             <constraint firstItem="JdP-Ss-XO0" firstAttribute="top" secondItem="gyY-O9-HYt" secondAttribute="bottom" constant="8" id="slJ-7f-OYz"/>
                             <constraint firstItem="ZdF-QY-Thl" firstAttribute="top" secondItem="Auz-oE-N6z" secondAttribute="bottom" id="tFT-qY-2Aw"/>
-                            <constraint firstItem="4J6-9S-fln" firstAttribute="top" secondItem="fi1-bK-Dcs" secondAttribute="bottom" constant="8" id="taG-oR-EfB" userLabel="Button Half Up 2.top = Button Half Down 1.bottom + 8"/>
+                            <constraint firstItem="4J6-9S-fln" firstAttribute="top" secondItem="fi1-bK-Dcs" secondAttribute="bottom" constant="8" id="taG-oR-EfB"/>
                             <constraint firstItem="C00-zK-osy" firstAttribute="height" secondItem="gyY-O9-HYt" secondAttribute="height" id="tgH-D6-VNO"/>
                             <constraint firstItem="Mqq-am-YeL" firstAttribute="height" secondItem="36S-f7-VIQ" secondAttribute="height" multiplier="0.5" id="wWF-Pn-SvD"/>
                             <constraint firstItem="Mqq-am-YeL" firstAttribute="top" secondItem="36S-f7-VIQ" secondAttribute="bottom" constant="8" id="wuB-e4-mVa"/>
@@ -378,7 +393,7 @@
                                     <constraint firstAttribute="height" constant="20" id="9Cl-2N-vZt"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="MXX-Zn-LPr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <color key="textColor" red="0.30963268869999999" green="0.6261317891" blue="0.74703525640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -390,10 +405,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1L-UI-nMl" userLabel="Button Play Again">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="jSR-yE-pIY"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1L-UI-nMl" userLabel="Button Play Again">
                                 <state key="normal" image="PlayAgain"/>
                                 <connections>
                                     <action selector="playAgain" destination="2Nu-dj-yvZ" eventType="touchUpInside" id="tuh-yv-Ajb"/>
@@ -403,7 +415,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.090012400950000002" green="0.15026851660000001" blue="0.28439852760000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="HXI-Tn-Gpd" firstAttribute="top" secondItem="d1L-UI-nMl" secondAttribute="bottom" constant="200" id="4gF-aK-yqw"/>
+                            <constraint firstItem="HXI-Tn-Gpd" firstAttribute="top" relation="lessThanOrEqual" secondItem="d1L-UI-nMl" secondAttribute="bottom" constant="200" id="4gF-aK-yqw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="84T-tb-QhC" secondAttribute="trailing" constant="10" id="8ml-kG-LDi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mWQ-lD-tvU" secondAttribute="trailing" constant="60" id="AEQ-6Q-K57"/>
                             <constraint firstItem="84T-tb-QhC" firstAttribute="leading" secondItem="Yk6-Gp-g7B" secondAttribute="leadingMargin" constant="10" id="Ao1-sW-FDM"/>
@@ -411,6 +423,7 @@
                             <constraint firstItem="mWQ-lD-tvU" firstAttribute="centerX" secondItem="Yk6-Gp-g7B" secondAttribute="centerX" id="F5H-6s-tGW"/>
                             <constraint firstItem="mWQ-lD-tvU" firstAttribute="leading" secondItem="Yk6-Gp-g7B" secondAttribute="leadingMargin" constant="60" id="HWw-cA-cBe"/>
                             <constraint firstItem="mWQ-lD-tvU" firstAttribute="top" secondItem="84T-tb-QhC" secondAttribute="bottom" constant="10" id="MNw-uK-Z9X"/>
+                            <constraint firstItem="84T-tb-QhC" firstAttribute="top" secondItem="6by-Sz-yVZ" secondAttribute="bottom" constant="100" id="RSk-sl-b3S"/>
                             <constraint firstItem="d1L-UI-nMl" firstAttribute="top" secondItem="mWQ-lD-tvU" secondAttribute="bottom" constant="100" id="X6g-kv-cQ3"/>
                             <constraint firstItem="84T-tb-QhC" firstAttribute="centerX" secondItem="Yk6-Gp-g7B" secondAttribute="centerX" id="ioN-TC-7Mp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="d1L-UI-nMl" secondAttribute="trailing" constant="70" id="pAf-w2-uAv"/>

@@ -12,7 +12,7 @@ class GameModel {
 
     let numberOfRoundsPerGame = 6
     let numberOfHistoricalEventsPerRound = 4
-    let roundTimeoutInSeconds = 5
+    let roundTimeoutInSeconds = 60
     let historicalEventModel = HistoricalEventModel()
     
     var gameStatus: GameStatus = GameStatus.nextQuestion

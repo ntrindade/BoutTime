@@ -95,7 +95,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func unwindToNewGame(segue: UIStoryboardSegue) {
         
         startNewGame()
@@ -248,16 +247,15 @@ class ViewController: UIViewController {
         timeoutDisplay -= 1
         if timeoutDisplay > -1 {
             labelTime.text = dateTimeConverter.secondsToHoursMinutesSeconds(timeoutDisplay)
+            return
         }
+        self.checkRoundResult()
     }
     
     func timeoutRound(seconds: Int) {
         
         gameWorkItem = DispatchWorkItem(qos: .default, flags: .enforceQoS) {
-            print("Timeout: \(self.timeoutDisplay)")
-            self.checkRoundResult()
         }
-        print("Seconds to timeout: \(seconds)")
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(seconds), execute: gameWorkItem!)
     }
     
